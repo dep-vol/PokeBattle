@@ -4,8 +4,10 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "ES2015.Iterable"
     ],
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,6 +22,7 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src",
+    "react-app-env.d.ts"
   ]
 }
