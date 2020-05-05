@@ -3,19 +3,24 @@ import {ActionsType} from '../actions/rootActions';
 
 const initialState: CharsState = {
     chars: [],
-    isLoading: false
+    isLoading: false,
+    offset: 0,
+    requestLimit: 960
 };
 
 export const charsReducer = (state: CharsState = initialState, action: ActionsType): CharsState => {
     switch (action.type) {
-        case 'LOADING_CHARS_START': {
+        case 'CHARS/CHARS_REQUEST': {
             return {...state, isLoading: true};
         }
-        case 'LOADING_CHARS_END': {
+        case 'CHARS/END_CHARS_REQUEST': {
             return {...state, isLoading: false};
         }
-        case 'SAVE_CHARS': {
+        case 'CHARS/CHARS_REQUEST_SUCCESS': {
             return {...state, chars: [...state.chars, ... action.data]};
+        }
+        case 'CHARS/CHANGE_CHARS_REQUEST_OFFSET': {
+            return {...state, offset: state.offset + Math.floor(300*Math.random()+200)};
         }
         default:
             return state;
