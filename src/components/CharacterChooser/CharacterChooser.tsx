@@ -1,13 +1,15 @@
 import React, { useEffect, Suspense } from 'react';
-import { Grid, Typography, makeStyles } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import { connect } from 'react-redux';
 import { actions } from '../../redux/actions/rootActions';
 import { RootState } from '../../redux/store';
 import { Dispatch } from 'redux';
 import { Char } from '../../types/api';
 import Loader from '../Loader/Loader';
+import { CharsList } from '../index';
 
-const CharsSet = React.lazy(() => import('../CharsSet/CharsSet'));
 
 const useStyles = makeStyles({
     container: {
@@ -19,7 +21,7 @@ type StateProps = {
     isLoading: boolean;
     chars: Char[];
     offset: number;
-    requestLimit: number
+    requestLimit: number;
 };
 type DispatchProps = {
     onFetchChars: () => void;
@@ -27,7 +29,10 @@ type DispatchProps = {
 type Props = StateProps & DispatchProps;
 
 
-const CharacterChooser: React.FC<Props> = ({ onFetchChars, isLoading, chars, offset, requestLimit }) => {
+const CharacterChooser: React.FC<Props> = (props) => {
+
+    const { onFetchChars, isLoading, chars, offset, requestLimit } = props;
+
     const style = useStyles();
 
     useEffect(() => {
@@ -41,7 +46,7 @@ const CharacterChooser: React.FC<Props> = ({ onFetchChars, isLoading, chars, off
                     Be ready for the battle! Choose your random char
                 </Typography>
                 <Suspense fallback={<Loader />}>
-                    <CharsSet isLoading={isLoading} chars={chars} onFetchChars={onFetchChars} offset={offset} requestLimit={requestLimit}/>
+                    <CharsList isLoading={isLoading} chars={chars} onFetchChars={onFetchChars} offset={offset} requestLimit={requestLimit}/>
                 </Suspense>
             </Grid>
         </Grid>

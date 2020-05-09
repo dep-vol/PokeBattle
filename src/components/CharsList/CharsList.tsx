@@ -1,7 +1,14 @@
 import React from 'react';
-import { Avatar, Card, CardContent, CardHeader, List, ListItem, ListItemText } from '@material-ui/core';
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import Loader from '../Loader/Loader';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import { Char } from '../../types/api';
 
 const useStyles = makeStyles((theme) => ({
@@ -27,15 +34,23 @@ const useStyles = makeStyles((theme) => ({
     paging: {
         display: 'flex',
         justifyContent: 'center',
-    }
+    },
+    buttonContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        marginTop: '20px',
+    },
 }));
 
 type Props = {
     isLoading: boolean;
     chars: Char[];
+    offset: number;
+    requestLimit: number;
+    onFetchChars: (offset: number) => void;
 }
 
-const CharsList: React.FC<Props> = ({ isLoading, chars}) => {
+const CharsList: React.FC<Props> = ({ isLoading, chars, requestLimit, offset, onFetchChars}) => {
 
     const style = useStyles();
 
@@ -69,6 +84,16 @@ const CharsList: React.FC<Props> = ({ isLoading, chars}) => {
             </div>
             <div>
                 {isLoading ? <Loader/> : null}
+            </div>
+            <div className={style.buttonContainer}>
+                <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={() => onFetchChars(offset)}
+                    disabled={isLoading ||offset > requestLimit}
+                >
+                    SHOW MORE
+                </Button>
             </div>
         </div>
 

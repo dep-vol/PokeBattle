@@ -7,7 +7,7 @@
       "esnext",
       "ES2015.Iterable"
     ],
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "plugins": [],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -19,7 +19,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "downlevelIteration": true
   },
   "include": [
     "src",

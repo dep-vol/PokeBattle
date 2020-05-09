@@ -3,11 +3,13 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga';
 import {charsReducer} from './reducers/charsReducer';
 import rootSaga from './sagas/rootSaga';
+import { appReducer } from './reducers/appReducer';
 
 const sagaMiddleware = createSagaMiddleware();
 
 const rootReducer = combineReducers({
-    charsState: charsReducer
+    charsState: charsReducer,
+    app: appReducer
 });
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
