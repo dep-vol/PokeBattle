@@ -1,12 +1,14 @@
+//CORE
 import Axios from 'axios';
-import {Char, GetChar, GetCharactersType} from '../types/api';
+//TYPES
+import { Char, GetChar, GetCharactersType } from 'api/types';
 
 const instance = Axios.create({baseURL:'https://pokeapi.co/api/v2/'});
 
 export const api = {
     getChar: async (charUrl: string): Promise<Char> => {
         const response = await instance.get<GetChar>(charUrl);
-        const { name, sprites, stats, weight} = response.data;
+        const { name, sprites, stats, weight } = response.data;
 
         return {
             name,
