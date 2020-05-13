@@ -7,6 +7,7 @@ import { Char } from 'api/types';
 import { actions, ExtractAction, asyncActions } from 'init/rootActions';
 import { api } from 'api/api';
 import { getOffsetAndLimit, OffsetAndLimit } from 'init/selectors/selectors';
+import { charsAsyncActions } from '../actions/charsActions';
 
 function* getCountWorker (): SagaIterator<void> {
     const count: number = yield call(api.getCount);
@@ -27,7 +28,7 @@ function* onLoadCharsAlertsWorker (): SagaIterator<void> {
 }
 
 
-function* fetchCharsWorker({offset}: ExtractAction<typeof asyncActions.CHARS_REQUEST>): SagaIterator<void>{
+function* fetchCharsWorker({offset}: ExtractAction<typeof charsAsyncActions.CHARS_REQUEST>): SagaIterator<void>{
     try {
         yield call(getCountWorker);
         yield call(getCharsDataWorker,offset);        
@@ -41,5 +42,5 @@ function* fetchCharsWorker({offset}: ExtractAction<typeof asyncActions.CHARS_REQ
 }
 
 export default function* fetchCharsWatcher(): Generator {
-    yield takeEvery(asyncActions.CHARS_REQUEST, fetchCharsWorker);
+    yield takeEvery(charsAsyncActions.CHARS_REQUEST, fetchCharsWorker);
 }

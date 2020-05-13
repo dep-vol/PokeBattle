@@ -1,0 +1,19 @@
+.load-enter {
+    opacity: 0;
+
+}
+.load-enter-active {
+    opacity: 1;
+    transition: opacity 6000ms ease-out
+}
+.load-enter-done {
+    opacity: 0;
+    transition: opacity 100ms ease-out
+}
+.load-enter-exit {
+    opacity: 1
+}
+.load-enter-exit-active {
+    opacity: 0;
+    transition: opacity 600ms ease-out
+}

@@ -8,7 +8,7 @@ const initialState: CharsState = {
     requestLimit: 0
 };
 
-export const charsReducer = (state: CharsState = initialState, action: CharsActionsType): CharsState => {
+export const charsReducer = (state = initialState, action: CharsActionsType): CharsState => {
     switch (action.type) {
         case 'CHARS/CHARS_REQUEST': {
             return {...state, isLoading: true};
@@ -28,7 +28,7 @@ export const charsReducer = (state: CharsState = initialState, action: CharsActi
         
         default:
             // eslint-disable-next-line 
-            const x: never = action;
+            const x = action;
             return state;
     }
 };

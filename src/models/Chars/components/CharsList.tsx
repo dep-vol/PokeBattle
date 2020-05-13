@@ -1,19 +1,25 @@
 //CORE
-import React from 'react';
+import React, { ReactElement } from 'react';
+
 //UI VENDORS
-import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+
+//ELEMS
+import { Loader } from 'elements/';
+import { useFetchChars } from '../';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
+import Avatar from '@material-ui/core/Avatar';
+import CardContent from '@material-ui/core/CardContent';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-//TYPES
-import { Char } from 'api/types';
-//ELEMS
-import { Loader } from 'elements/';
+import { CardItem } from './CardItem/CardItem';
+
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'wrap',
         justifyContent: 'center',
         padding: '20px'
+    },
+    container: {
+        padding:'20px'
     },
     card: {
         width: '250px',
@@ -44,62 +53,41 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         marginTop: '20px',
     },
+
 }));
 
-type Props = {
-    isLoading: boolean;
-    chars: Char[];
-    offset: number;
-    requestLimit: number;
-    onFetchChars: (offset: number) => void;
-}
 
-export const CharsList: React.FC<Props> = ({ isLoading, chars, requestLimit, offset, onFetchChars}) => {
-
+export const CharsList: React.FC = (): ReactElement => {
+    const { isLoading, chars, requestLimit, offset, onFetchChars, onInit } = useFetchChars();
     const style = useStyles();
-
-    const CharsNodes = chars.map((char, i) => {
-        return <Card key={i+Math.random()} className={style.card}>
-            <CardHeader
-                avatar={
-                    <Avatar src={char.sprites} variant='rounded' className={style.avatar} />
-                }
-                title={char.name}
-                titleTypographyProps={{variant:'h5'}}
-            />
-            <CardContent>
-                <List>
-                    {char.stats.map((stat, i) => {
-                        return <ListItem className={style.listItem} key={stat.base+i+Math.random()}>
-                            <ListItemText primary={stat.name}/>
-                            <ListItemText secondary={stat.base}/>
-                        </ListItem>;
-                    })}
-                </List>
-            </CardContent>
-
-        </Card>;
+    const CharsNodes = chars.map((char) => {
+        return <CardItem key={char.name} char={char} onInit={onInit} isLoading={isLoading} />;
     });
-
     return (
-        <div>
-            <div className={style.root}>
-                {CharsNodes}
-            </div>
-            <div>
-                {isLoading ? <Loader/> : null}
-            </div>
-            <div className={style.buttonContainer}>
-                <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={() => onFetchChars(offset)}
-                    disabled={isLoading ||offset > requestLimit}
-                >
-                    SHOW MORE
-                </Button>
-            </div>
-        </div>
-
+        <Grid container className={style.container}>
+            <Grid item xs={12}>
+                <Typography align='center' variant='h4' color='textPrimary'>
+                    Be ready for the battle! Choose your random char
+                </Typography>
+                <div>
+                    <div className={style.root}>
+                        {CharsNodes}
+                    </div>
+                    <div>
+                        {isLoading && <Loader/>}
+                    </div>
+                    <div className={style.buttonContainer}>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={onFetchChars(offset)}
+                            disabled={isLoading || offset >= requestLimit}
+                        >
+                            SHOW MORE
+                        </Button>
+                    </div>
+                </div>
+            </Grid>
+        </Grid>
     );
 };

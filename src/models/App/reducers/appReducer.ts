@@ -1,4 +1,5 @@
-import { AppActions, AppState } from 'App/types';
+import { AppState } from 'init/types/store';
+import { AppActions } from '../actions/appActions';
 
 const initialState: AppState = {
     alert: {

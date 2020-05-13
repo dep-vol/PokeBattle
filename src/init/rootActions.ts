@@ -1,11 +1,13 @@
 import { charsActions, charsAsyncActions } from 'models/Chars/actions/charsActions';
-import { appActions } from 'App/actions/appActions';
+import { appActions } from 'models/App/actions/appActions';
 import { inferValues, inferActions } from 'init/types/store';
+import { initGameActions } from '../models/Battle/actions/initGameActions';
 
 
 export const actions = {
     ...charsActions,
-    ...appActions
+    ...appActions,
+    ...initGameActions
 };
 
 export const asyncActions = {

@@ -27,4 +27,5 @@ export type Char = {
         base: number;
     }[];
     weight: number;
+    played: boolean
 }

@@ -2,5 +2,5 @@
  ** Components
  ********************/
 
-export { default as CharacterChooser } from './components/CharacterChooser';
+export { useFetchChars } from './hooks/useFetchChars';
 export { CharsList } from './components/CharsList';

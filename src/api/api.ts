@@ -19,11 +19,12 @@ export const api = {
                     base: el.base_stat
                 };
             }),
-            weight
+            weight,
+            played: false
         };
     },
     getCharacters: async (offset = 0): Promise<Char[]> => {
-        const response = await instance.get<GetCharactersType>(`pokemon/?offset=${offset}&limit=10`);
+        const response = await instance.get<GetCharactersType>(`pokemon/?offset=${offset}&limit=5`);
         const charactersBase = response.data.results;
         return Promise.all(charactersBase.map((el) => {
             return api.getChar(el.url);

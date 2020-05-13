@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bf9474f6-6412-413a-864d-0d04ac2bbfab" name="Default Changelist" comment="CharsList make">
+      <change afterPath="$PROJECT_DIR$/src/elements/Footer/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/Welcome/Welcome.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/init/theme.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/App/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/App/actions/appActions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/App/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/App/reducers/appReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Battle/actions/initGameActions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Battle/hooks/useBattleData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Battle/reducers/initGameReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Battle/saga/initGameSaga.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Chars/components/CardItem/CardItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Chars/components/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Chars/hooks/useFetchChars.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/material_ui.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/saga.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pokebattle.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/App.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/actions/appActions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/reducers/appReducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/types/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/Loader/Loader.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Loader/Loader.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/Loader/Loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Loader/Loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/rootActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/rootActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/rootSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/rootSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/selectors/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/selectors/selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/types/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/types/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Chars/components/CharacterChooser.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Chars/components/CharsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/components/CharsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Chars/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Chars/reducers/charsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/reducers/charsReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1bP08G0dPYmMUfwkSJQOdwVYdLO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/@material-ui" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="ts.external.directory.path" value="E:\Projects\pokebattle\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\pokebattle\src\models\Chars\components" />
+      <recent name="E:\Projects\pokebattle" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="js.build_tools.npm" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <package-manager value="C:\Program Files (x86)\Yarn" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf9474f6-6412-413a-864d-0d04ac2bbfab" name="Default Changelist" comment="" />
+      <created>1588518260426</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588518260426</updated>
+      <workItem from="1588518268555" duration="2536000" />
+      <workItem from="1588526361964" duration="10591000" />
+      <workItem from="1588587552184" duration="4261000" />
+      <workItem from="1588593194964" duration="7638000" />
+      <workItem from="1588605523932" duration="994000" />
+      <workItem from="1588606558658" duration="14719000" />
+      <workItem from="1588678185830" duration="16057000" />
+      <workItem from="1588714590566" duration="195000" />
+      <workItem from="1588715240299" duration="1521000" />
+      <workItem from="1588716892378" duration="3882000" />
+      <workItem from="1588725219244" duration="1192000" />
+      <workItem from="1588756624257" duration="1238000" />
+      <workItem from="1588791637485" duration="112000" />
+      <workItem from="1588889139566" duration="103000" />
+      <workItem from="1589136684375" duration="411000" />
+      <workItem from="1589137128653" duration="8756000" />
+      <workItem from="1589195567269" duration="433000" />
+      <workItem from="1589196057648" duration="273000" />
+      <workItem from="1589196383620" duration="1356000" />
+      <workItem from="1589202246291" duration="2124000" />
+      <workItem from="1589208084069" duration="12324000" />
+      <workItem from="1589227166310" duration="182000" />
+      <workItem from="1589272607001" duration="11435000" />
+      <workItem from="1589294801263" duration="6256000" />
+      <workItem from="1589311819447" duration="30937000" />
+    </task>
+    <task id="LOCAL-00001" summary="Introduce Saga`s">
+      <created>1588614019135</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588614019135</updated>
+    </task>
+    <task id="LOCAL-00002" summary="CharsList make">
+      <created>1588708297302</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588708297303</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Introduce Saga`s" />
+    <MESSAGE value="CharsList make" />
+    <option name="LAST_COMMIT_MESSAGE" value="CharsList make" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="394" y="110" key="#ESLint" timestamp="1589211753289">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="394" y="110" key="#ESLint/0.0.1366.768@0.0.1366.768" timestamp="1589211753289" />
+    <state x="400" y="0" key="#TypeScript" timestamp="1588590908554">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="400" y="0" key="#TypeScript/0.0.1366.728@0.0.1366.728" timestamp="1588590908554" />
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589137413380">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1589137413380" />
+    <state x="265" y="132" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1588618678655">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="265" y="132" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1366.728@0.0.1366.728" timestamp="1588618678655" />
+    <state x="412" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588614039762">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="412" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1588614039762" />
+    <state x="315" y="107" key="FileChooserDialogImpl" timestamp="1588757772287">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="315" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588757772287" />
+    <state width="919" height="176" key="GridCell.Tab.0.bottom" timestamp="1589384546406">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="919" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589384546406" />
+    <state width="918" height="191" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589227088628" />
+    <state width="919" height="176" key="GridCell.Tab.0.center" timestamp="1589384546406">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="919" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589384546406" />
+    <state width="918" height="191" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1589227088628" />
+    <state width="919" height="176" key="GridCell.Tab.0.left" timestamp="1589384546406">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="919" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589384546406" />
+    <state width="918" height="191" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1589227088628" />
+    <state width="919" height="176" key="GridCell.Tab.0.right" timestamp="1589384546406">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="919" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589384546406" />
+    <state width="918" height="191" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1589227088628" />
+    <state x="130" y="13" width="998" height="708" key="SettingsEditor" timestamp="1589278946190">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="130" y="13" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589278946190" />
+    <state x="130" y="14" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1589208026425" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1588678300217">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1588678300217" />
+    <state x="327" y="211" key="scopes" timestamp="1588756020162">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="327" y="211" key="scopes/0.0.1366.728@0.0.1366.728" timestamp="1588756020162" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1589285170740">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1589285170740" />
+    <state x="346" y="52" width="672" height="716" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1589211173426" />
+  </component>
+</project>
