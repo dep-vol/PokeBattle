@@ -29,7 +29,7 @@ export const Welcome = () => {
                             <Typography align='center' variant='h6' color='textPrimary' gutterBottom>
                                 About:
                             </Typography>
-                            <Typography align='center' variant='body1' color='textSecondary' gutterBottom>
+                            <Typography align='center' variant='body1' component='div' color='textSecondary' gutterBottom>
                                 <p>This is 1 x 1 battle with two pokemons against each other.</p>
                                 <p>You should choose your pokemon in randomly list of chars.</p>
                                 <p>If you did not find your pokemon reload the page to get another list.</p>

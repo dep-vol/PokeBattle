@@ -19,13 +19,13 @@ export type GetChar = {
     weight: number;
 }
 
-export type Char = {
+export type CharApi = {
     name: string;
     sprites: string;
     stats: {
         name: string;
         base: number;
     }[];
+    baseHP: number;
     weight: number;
-    played: boolean
 }

@@ -11,12 +11,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import { Loader } from 'elements/';
 import { useFetchChars } from '../';
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import Avatar from '@material-ui/core/Avatar';
-import CardContent from '@material-ui/core/CardContent';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+
 import { CardItem } from './CardItem/CardItem';
 
 
@@ -33,16 +28,8 @@ const useStyles = makeStyles((theme) => ({
     },
     card: {
         width: '250px',
-        margin: '0 10px 20px'
-    },
-    avatar: {
-        border: '1px solid white',
-        width: '70px',
-        height: '70px'
-    },
-    listItem: {
-        justifyContent: 'space-between',
-        borderBottom: `1px solid ${theme.palette.primary.light}`
+        margin: '0 10px 20px',
+        padding: '20px'
     },
     paging: {
         display: 'flex',
@@ -58,10 +45,19 @@ const useStyles = makeStyles((theme) => ({
 
 
 export const CharsList: React.FC = (): ReactElement => {
-    const { isLoading, chars, requestLimit, offset, onFetchChars, onInit } = useFetchChars();
+    const { isLoading, loadingChars, chars, requestLimit, offset, onFetchChars, onInit } = useFetchChars();
     const style = useStyles();
     const CharsNodes = chars.map((char) => {
-        return <CardItem key={char.name} char={char} onInit={onInit} isLoading={isLoading} />;
+        return (
+            <Card className={style.card} key={char.name} >
+                <CardItem char={char}/>
+                <div className={style.paging}>
+                    <Button variant='contained' onClick={onInit(char.name)} disabled={isLoading}>
+                        Choose
+                    </Button>
+                </div>
+            </Card>
+        );
     });
     return (
         <Grid container className={style.container}>
@@ -74,7 +70,7 @@ export const CharsList: React.FC = (): ReactElement => {
                         {CharsNodes}
                     </div>
                     <div>
-                        {isLoading && <Loader/>}
+                        {loadingChars && <Loader/>}
                     </div>
                     <div className={style.buttonContainer}>
                         <Button

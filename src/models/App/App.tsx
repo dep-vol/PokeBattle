@@ -8,6 +8,7 @@ import { Alert, Footer, Header, Welcome } from 'elements';
 //MODELS
 import { CharsList } from 'models/Chars';
 import { theme } from 'init/theme';
+import {Battle} from "../Battle/components/Battle";
 
 const style: React.CSSProperties= {
     display: 'flex',
@@ -30,6 +31,9 @@ export const App: React.FC = () => {
                         </Route>
                         <Route path='/chars'>
                             <CharsList/>
+                        </Route>
+                        <Route path='/battle'>
+                            <Battle/>
                         </Route>
                     </Switch>
                     <Footer/>

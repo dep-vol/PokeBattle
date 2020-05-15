@@ -1,7 +1,4 @@
-import {Char} from 'api/types';
-import { appActions } from '../../models/App/actions/appActions';
-
-/********************************** 
+/**********************************
  ** TYPES METHODS 
  **********************************/
 export type inferValues<T> = T extends {[key: string]: infer U} ? U : never;
@@ -14,6 +11,19 @@ export type inferActions<T> = T extends {['type']: infer U} ? U : never;
 export type Alert = {
     msg: string;
     type: 'success' | 'info' | 'warning' | 'error' | undefined;
+}
+
+export type Char = {
+    name: string;
+    sprites: string;
+    stats: {
+        name: string;
+        base: number;
+    }[];
+    baseHP: number;
+    countHP: number;
+    weight: number;
+    played: boolean;
 }
 
 /**********************************
@@ -34,5 +44,9 @@ export type AppState = {
 export type PlayerState = {
     Player: Char;
     Enemy: Char;
-    loading: boolean;
+    gameStart: boolean;
+    log: {
+        value: string;
+        action: string;
+    };
 };

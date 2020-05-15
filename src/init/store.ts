@@ -4,14 +4,14 @@ import createSagaMiddleware from 'redux-saga';
 import {charsReducer} from 'models/Chars/reducers/charsReducer';
 import rootSaga from 'init/rootSaga';
 import { appReducer } from 'models/App/reducers/appReducer';
-import { initGameReducer } from '../models/Battle/reducers/initGameReducer';
+import { gameReducer } from '../models/Battle/reducers/gameReducer';
 
 const sagaMiddleware = createSagaMiddleware();
 
 const rootReducer = combineReducers({
     charsState: charsReducer,
     app: appReducer,
-    initGame: initGameReducer
+    initGame: gameReducer
 });
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));

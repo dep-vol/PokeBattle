@@ -2,7 +2,7 @@
 import { takeEvery, put, call, select } from 'redux-saga/effects';
 import { SagaIterator } from 'redux-saga';
 //TYPES
-import { Char } from 'api/types';
+import { Char } from 'init/types/store';
 //BLL
 import { actions, ExtractAction, asyncActions } from 'init/rootActions';
 import { api } from 'api/api';

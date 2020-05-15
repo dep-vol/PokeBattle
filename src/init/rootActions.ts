@@ -2,12 +2,14 @@ import { charsActions, charsAsyncActions } from 'models/Chars/actions/charsActio
 import { appActions } from 'models/App/actions/appActions';
 import { inferValues, inferActions } from 'init/types/store';
 import { initGameActions } from '../models/Battle/actions/initGameActions';
+import { engineActions } from '../models/Battle/actions/engineActions';
 
 
 export const actions = {
     ...charsActions,
     ...appActions,
-    ...initGameActions
+    ...initGameActions,
+    ...engineActions
 };
 
 export const asyncActions = {

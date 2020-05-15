@@ -1,4 +1,4 @@
-import { Char } from 'api/types';
+import { Char } from 'init/types/store';
 import { inferValues } from 'init/types/store';
 
 

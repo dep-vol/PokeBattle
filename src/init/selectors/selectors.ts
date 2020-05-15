@@ -1,5 +1,5 @@
 import { RootState } from 'init/store';
-import { Char } from '../../api/types';
+import { Char } from 'init/types/store';
 
 export const getOffsetAndLimit = (state: RootState) => {
     return {offset: state.charsState.offset, requestLimit: state.charsState.requestLimit};

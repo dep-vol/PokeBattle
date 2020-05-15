@@ -1,29 +1,26 @@
 //CORE
-import React, { useEffect, useCallback, useMemo } from 'react';
+import { useEffect, useCallback } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 //TYPES
 import { RootState } from 'init/store';
 //BLL
 import { actions } from 'init/rootActions';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import Avatar from '@material-ui/core/Avatar';
-import CardContent from '@material-ui/core/CardContent';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Button from '@material-ui/core/Button';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-
-type onFetchChars = (offset?: number) => void
+import { useHistory } from 'react-router-dom';
 
 export const useFetchChars = () => {
 
     const dispatch = useDispatch();
-    const isLoading = useSelector((state: RootState) => state.charsState.isLoading, shallowEqual);
+
+    const loadingChars = useSelector((state: RootState) => state.charsState.isLoading, shallowEqual);
+    const gameStart = useSelector((state: RootState) => state.initGame.gameStart, shallowEqual);
+    const isLoading = loadingChars || gameStart;
+
     const chars =  useSelector((state: RootState) => state.charsState.chars, shallowEqual);
     const offset = useSelector((state: RootState) => state.charsState.offset, shallowEqual);
     const requestLimit = useSelector((state: RootState) => state.charsState.requestLimit, shallowEqual);
+
+
+    const history = useHistory();
 
     useEffect(() => {
         (() => {
@@ -38,10 +35,10 @@ export const useFetchChars = () => {
     },[dispatch]);
 
     const onInit = useCallback((name) => () => {
-        dispatch(actions.initGame(name));
-    },[dispatch]);
+        dispatch(actions.initGame(name, history));
+    },[dispatch, history]);
 
 
 
-    return {isLoading, chars, offset, requestLimit, onFetchChars, onInit};
+    return {isLoading, loadingChars, chars, offset, requestLimit, onFetchChars, onInit};
 };
