@@ -25,10 +25,17 @@ export const charsReducer = (state = initialState, action: CharsActionsType): Ch
         case 'CHARS/SET_CHARS_COUNT': {
             return {...state, requestLimit: action.count};
         }
-        
+        case 'CHARS/SET_CHAR_PLAYED': {
+            return {...state, chars: state.chars.map((char) => {
+                return char.name === action.enemyName
+                    ? {...char, played: true}
+                    : char;
+            })};
+        }
+
         default:
             // eslint-disable-next-line 
-            const x = action;
+            const x: never = action;
             return state;
     }
 };

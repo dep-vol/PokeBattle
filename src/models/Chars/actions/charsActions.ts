@@ -15,6 +15,7 @@ export const charsActions = {
     charsRequestSuccess: (data: Char[]) => ({type: 'CHARS/CHARS_REQUEST_SUCCESS', data} as const),
     changeCharsRequestOffset: () => ({type: 'CHARS/CHANGE_CHARS_REQUEST_OFFSET'} as const),
     setCharsCount: (count: number) => ({type: 'CHARS/SET_CHARS_COUNT', count} as const),
+    setCharPlayed: (enemyName: string) => ({type: 'CHARS/SET_CHAR_PLAYED', enemyName} as const),
     /************************************** 
     **ASYNC ACTION_CREATORS
     **************************************/

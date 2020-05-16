@@ -26,9 +26,17 @@ const useStyles = makeStyles({
         }
     },
     loggerContainer: {
-        padding: '20px',
+        marginTop: '10px',
         '& div': {
-            width: '100%'
+            width: '375px',
+
+            '& textarea': {
+                color: '#757575',
+                lineHeight: '1.75',
+                fontStyle: 'oblique',
+                fontFamily: 'monospace',
+                fontSize: 'inherit'
+            }
         }
     }
 
@@ -52,17 +60,17 @@ export const Battle: React.FC = () => {
                         <Button variant='outlined' color='secondary' onClick={onPlayerAttack}>
                             Attack
                         </Button>
+                        <div className={style.loggerContainer}>
+                            <TextField
+                                id="logger"
+                                label="Logger"
+                                value={loggerValue}
+                                multiline
+                                rowsMax={15}
+                                size='medium'
+                            />
+                        </div>
                     </div>
-                </div>
-
-                <div className={style.loggerContainer}>
-                    <TextField
-                        id="logger"
-                        label="Logger"
-                        value={loggerValue}
-                        multiline
-                        rowsMax={20}
-                    />
                 </div>
 
                 <Card className={style.card}>

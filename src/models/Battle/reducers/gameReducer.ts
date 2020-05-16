@@ -8,8 +8,7 @@ const initialState: PlayerState = {
         sprites:'',
         baseHP: 0,
         countHP: 100,
-        weight: 0,
-        played: true
+        weight: 0
     },
     Enemy: {
         name: '',
@@ -17,12 +16,11 @@ const initialState: PlayerState = {
         sprites:'',
         baseHP: 0,
         countHP: 100,
-        weight: 0,
-        played: false
+        weight: 0
     },
     gameStart: false,
     log: {
-        value:'Your turn! \n',
+        value:'',
         action:''
     }
 
@@ -31,10 +29,10 @@ const initialState: PlayerState = {
 export const gameReducer =(state = initialState, action: GameActions): PlayerState => {
     switch (action.type) {
         case 'BATTLE/INIT_GAME/LOAD_PLAYER':{
-            return {...state, Player:{...state.Player, ...action.char}};
+            return {...state, Player:{...state.Player, ...action.char, countHP: 100}};
         }
         case 'BATTLE/INIT_GAME/LOAD_ENEMY':{
-            return {...state, Enemy:{...state.Enemy,...action.char, played: true}};
+            return {...state, Enemy:{...state.Enemy,...action.char, countHP: 100}};
         }
         case 'BATTLE/INIT_GAME/START': {
             return {...state, gameStart: true};
@@ -56,6 +54,9 @@ export const gameReducer =(state = initialState, action: GameActions): PlayerSta
         }
         case 'BATTLE/ENGINE/SET_LOG_ACTION': {
             return {...state, log: {...state.log, value: state.log.value + action.action}};
+        }
+        case 'BATTLE/ENGINE/CLEAR_LOG_ACTION':{
+            return {...state, log: {...state.log, value: ''}};
         }
         default:
             // eslint-disable-next-line

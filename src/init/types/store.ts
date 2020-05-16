@@ -23,7 +23,7 @@ export type Char = {
     baseHP: number;
     countHP: number;
     weight: number;
-    played: boolean;
+    played?: boolean;
 }
 
 /**********************************

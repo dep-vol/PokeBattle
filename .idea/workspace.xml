@@ -11,54 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5471dbcc-bbd1-4f25-88e5-076d6730730e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Battle/actions/engineActions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Battle/actions/gameActions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pokebattle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pokebattle.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/tecto.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Alert/Alert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Alert/Alert.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Loader/Loader.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Loader/Loader.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Loader/Loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Loader/Loader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Welcome/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Welcome/Welcome.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/rootActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/rootActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/rootSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/rootSaga.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/init/selectors/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/selectors/selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/theme.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/init/types/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/types/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/App/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/App/actions/appActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/App/actions/appActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/App/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/App/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/App/reducers/appReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/App/reducers/appReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/actions/initGameActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/actions/initGameActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/hooks/useBattleData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/hooks/useBattleData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/reducers/initGameReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/reducers/gameReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/initGameSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/initGameSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Battle/actions/engineActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/actions/engineActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Battle/reducers/gameReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/reducers/gameReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Chars/actions/charsActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/actions/charsActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/components/CardItem/CardItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/components/CardItem/CardItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/components/CharsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/components/CharsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/components/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/components/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/hooks/useFetchChars.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/hooks/useFetchChars.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Chars/reducers/charsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/reducers/charsReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +109,7 @@
       <workItem from="1589455787780" duration="2692000" />
       <workItem from="1589464719316" duration="531000" />
       <workItem from="1589471767568" duration="30889000" />
-      <workItem from="1589563879788" duration="823000" />
+      <workItem from="1589563879788" duration="19263000" />
     </task>
     <servers />
   </component>
@@ -179,26 +141,26 @@
       <screen x="44" y="0" width="1322" height="768" />
     </state>
     <state x="575" y="115" key="FileChooserDialogImpl/44.0.1322.768@44.0.1322.768" timestamp="1589473913623" />
-    <state width="888" height="192" key="GridCell.Tab.0.bottom" timestamp="1589564504310">
+    <state width="888" height="192" key="GridCell.Tab.0.bottom" timestamp="1589577360134">
       <screen x="44" y="0" width="1322" height="768" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589416298002" />
-    <state width="888" height="192" key="GridCell.Tab.0.bottom/44.0.1322.768@44.0.1322.768" timestamp="1589564504310" />
-    <state width="888" height="192" key="GridCell.Tab.0.center" timestamp="1589564504309">
+    <state width="888" height="192" key="GridCell.Tab.0.bottom/44.0.1322.768@44.0.1322.768" timestamp="1589577360134" />
+    <state width="888" height="192" key="GridCell.Tab.0.center" timestamp="1589577360133">
       <screen x="44" y="0" width="1322" height="768" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589416298001" />
-    <state width="888" height="192" key="GridCell.Tab.0.center/44.0.1322.768@44.0.1322.768" timestamp="1589564504309" />
-    <state width="888" height="192" key="GridCell.Tab.0.left" timestamp="1589564504307">
+    <state width="888" height="192" key="GridCell.Tab.0.center/44.0.1322.768@44.0.1322.768" timestamp="1589577360133" />
+    <state width="888" height="192" key="GridCell.Tab.0.left" timestamp="1589577360132">
       <screen x="44" y="0" width="1322" height="768" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589416298000" />
-    <state width="888" height="192" key="GridCell.Tab.0.left/44.0.1322.768@44.0.1322.768" timestamp="1589564504307" />
-    <state width="888" height="192" key="GridCell.Tab.0.right" timestamp="1589564504309">
+    <state width="888" height="192" key="GridCell.Tab.0.left/44.0.1322.768@44.0.1322.768" timestamp="1589577360132" />
+    <state width="888" height="192" key="GridCell.Tab.0.right" timestamp="1589577360133">
       <screen x="44" y="0" width="1322" height="768" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589416298001" />
-    <state width="888" height="192" key="GridCell.Tab.0.right/44.0.1322.768@44.0.1322.768" timestamp="1589564504309" />
+    <state width="888" height="192" key="GridCell.Tab.0.right/44.0.1322.768@44.0.1322.768" timestamp="1589577360133" />
     <state x="44" y="0" width="1322" height="768" key="SettingsEditor" timestamp="1589564711245">
       <screen x="44" y="0" width="1322" height="768" />
     </state>
