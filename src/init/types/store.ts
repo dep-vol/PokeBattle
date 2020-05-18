@@ -11,6 +11,10 @@ export type inferActions<T> = T extends {['type']: infer U} ? U : never;
 export type Alert = {
     msg: string;
     type: 'success' | 'info' | 'warning' | 'error' | undefined;
+    anchor?: {
+        vertical: 'top' | 'bottom';
+        horizontal: 'left' | 'right' | 'center';
+    };
 }
 
 export type Char = {
@@ -22,6 +26,8 @@ export type Char = {
     }[];
     baseHP: number;
     countHP: number;
+    baseMP: number;
+    countMP: number;
     weight: number;
     played?: boolean;
 }
@@ -42,11 +48,12 @@ export type AppState = {
 }
 
 export type PlayerState = {
-    Player: Char;
-    Enemy: Char;
+    Player: Omit<Required<Char>, 'played'>;
+    Enemy: Omit<Required<Char>, 'played'>;
     gameStart: boolean;
     log: {
         value: string;
         action: string;
     };
+    playerWaiting: boolean;
 };

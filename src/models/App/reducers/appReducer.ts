@@ -4,7 +4,11 @@ import { AppActions } from '../actions/appActions';
 const initialState: AppState = {
     alert: {
         msg: '',
-        type: undefined
+        type: undefined,
+        anchor: {
+            horizontal: 'center',
+            vertical: 'bottom'
+        }
     }
 };
 

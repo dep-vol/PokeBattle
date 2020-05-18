@@ -11,16 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5471dbcc-bbd1-4f25-88e5-076d6730730e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/tecto.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/heal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/super_attack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Battle/saga/skillsSaga.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Battle/saga/turnSaga.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/selectors/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/selectors/selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/Alert/Alert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Alert/Alert.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/init/types/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/types/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/App/reducers/appReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/App/reducers/appReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/actions/engineActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/actions/engineActions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Battle/hooks/useBattleData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/hooks/useBattleData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/reducers/gameReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/reducers/gameReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/actions/charsActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/actions/charsActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/reducers/charsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/reducers/charsReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Chars/components/CardItem/CardItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/components/CardItem/CardItem.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +43,15 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1bsLgwCbjyafAiUT4h9p1L3PDJ4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -109,7 +118,8 @@
       <workItem from="1589455787780" duration="2692000" />
       <workItem from="1589464719316" duration="531000" />
       <workItem from="1589471767568" duration="30889000" />
-      <workItem from="1589563879788" duration="19263000" />
+      <workItem from="1589563879788" duration="47297000" />
+      <workItem from="1589743130631" duration="18305000" />
     </task>
     <servers />
   </component>
@@ -128,6 +138,9 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="163" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589481341950">
       <screen x="44" y="0" width="1322" height="768" />
@@ -141,25 +154,29 @@
       <screen x="44" y="0" width="1322" height="768" />
     </state>
     <state x="575" y="115" key="FileChooserDialogImpl/44.0.1322.768@44.0.1322.768" timestamp="1589473913623" />
-    <state width="888" height="192" key="GridCell.Tab.0.bottom" timestamp="1589577360134">
-      <screen x="44" y="0" width="1322" height="768" />
+    <state width="919" height="192" key="GridCell.Tab.0.bottom" timestamp="1589797200055">
+      <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589416298002" />
+    <state width="919" height="192" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1589797200055" />
     <state width="888" height="192" key="GridCell.Tab.0.bottom/44.0.1322.768@44.0.1322.768" timestamp="1589577360134" />
-    <state width="888" height="192" key="GridCell.Tab.0.center" timestamp="1589577360133">
-      <screen x="44" y="0" width="1322" height="768" />
+    <state width="919" height="192" key="GridCell.Tab.0.center" timestamp="1589797200053">
+      <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589416298001" />
+    <state width="919" height="192" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1589797200053" />
     <state width="888" height="192" key="GridCell.Tab.0.center/44.0.1322.768@44.0.1322.768" timestamp="1589577360133" />
-    <state width="888" height="192" key="GridCell.Tab.0.left" timestamp="1589577360132">
-      <screen x="44" y="0" width="1322" height="768" />
+    <state width="919" height="192" key="GridCell.Tab.0.left" timestamp="1589797200052">
+      <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589416298000" />
+    <state width="919" height="192" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1589797200052" />
     <state width="888" height="192" key="GridCell.Tab.0.left/44.0.1322.768@44.0.1322.768" timestamp="1589577360132" />
-    <state width="888" height="192" key="GridCell.Tab.0.right" timestamp="1589577360133">
-      <screen x="44" y="0" width="1322" height="768" />
+    <state width="919" height="192" key="GridCell.Tab.0.right" timestamp="1589797200054">
+      <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589416298001" />
+    <state width="919" height="192" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1589797200054" />
     <state width="888" height="192" key="GridCell.Tab.0.right/44.0.1322.768@44.0.1322.768" timestamp="1589577360133" />
     <state x="44" y="0" width="1322" height="768" key="SettingsEditor" timestamp="1589564711245">
       <screen x="44" y="0" width="1322" height="768" />

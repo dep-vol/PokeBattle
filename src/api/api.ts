@@ -16,12 +16,19 @@ export const api = {
                 base: el.base_stat
             };
         });
+        const def = mappedStats.find(stat => stat.name === 'defense');
+        def && def.base <= 60
+            ? mappedStats.push({name: 'mp', base: 40})
+            : mappedStats.push({name: 'mp', base: 20});
+
+        const mp = mappedStats.find(stat => stat.name === 'mp');
 
         return {
             name,
             sprites: sprites.front_default,
             stats: mappedStats,
             baseHP: hp ? hp.base_stat : 0,
+            baseMP: mp ? mp.base : 0,
             weight
         };
     },

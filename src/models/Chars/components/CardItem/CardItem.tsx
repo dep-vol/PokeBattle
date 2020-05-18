@@ -37,6 +37,19 @@ type Props = {
 const CardItemEl: React.FC<Props> = ({char}) => {
     const style = useStyles();
 
+    const isBaseStatsStyle = (stat: { name: string; base: number }, char: Char) => {
+        if (stat.name === 'hp' && char.countHP) {
+            return {
+                background: `linear-gradient(90deg, #f44336 ${char.countHP * 100}%, rgba(0,0,0,0.12) 0%)`
+            };
+        } else if (stat.name === 'mp' && char.countMP) {
+            return {
+                background: `linear-gradient(90deg, #3f51b5 ${char.countMP * 100}%, rgba(0,0,0,0.12) 0%)`
+            };
+        }
+        else return {};
+    };
+
     return (
         <>
             <CardHeader
@@ -51,14 +64,10 @@ const CardItemEl: React.FC<Props> = ({char}) => {
                     {char.stats.map((stat, i) => {
                         return (
                             <ListItem
-                                style={stat.name === 'hp'
-                                    ? {
-                                        background: `linear-gradient(90deg, #f44336 ${char.countHP*100}%, rgba(0,0,0,0.12) 0%)`
-                                    }
-                                    : {}
-                                }
+                                style={isBaseStatsStyle(stat, char)}
                                 className={style.listItem}
                                 key={stat.name + i}
+                                dense
                             >
                                 <ListItemText primary={stat.name}/>
                                 <ListItemText secondary={stat.base}/>

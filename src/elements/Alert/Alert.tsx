@@ -1,5 +1,5 @@
 //CORE
-import React, {  useState, useEffect } from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 //UI VENDOR
 import Snackbar from '@material-ui/core/Snackbar';
@@ -16,19 +16,19 @@ export const Alert: React.FC = () => {
     const dispatch = useDispatch();
 
     const [open, setOpen] = useState(false);
-    const handleClose = () => {
+    const handleClose = useCallback(() => {
         setOpen(false);
         dispatch(actions.setMsg({ type: undefined, msg:''}));
-    };
+    }, [dispatch]);
 
     useEffect(() => {
-        if (msg.type) setOpen(true);
-    },[msg.type]);
+        if (msg.msg) setOpen(true);
+    },[msg.msg]);
 
     if (!msg.type) return null;
 
     return (
-        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+        <Snackbar open={open} autoHideDuration={1500} onClose={handleClose} anchorOrigin={msg.anchor}>
             <MuiAlert onClose={handleClose} severity={msg.type} variant='filled' >
                 {msg.msg}
             </MuiAlert>

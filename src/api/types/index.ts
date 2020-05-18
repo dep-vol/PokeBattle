@@ -27,5 +27,6 @@ export type CharApi = {
         base: number;
     }[];
     baseHP: number;
+    baseMP: number;
     weight: number;
 }

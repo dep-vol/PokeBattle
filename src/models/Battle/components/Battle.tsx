@@ -1,11 +1,13 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid/Grid';
-import {Card} from '@material-ui/core';
+import {Badge, Card} from '@material-ui/core';
 import {CardItem} from 'models/Chars/components/CardItem/CardItem';
 import {useBattleData} from '../hooks/useBattleData';
 import makeStyles from '@material-ui/styles/makeStyles/makeStyles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import heal from 'img/heal.png';
+import superAttack from 'img/super_attack.png';
 
 const useStyles = makeStyles({
     container: {
@@ -22,7 +24,10 @@ const useStyles = makeStyles({
     playerCard: {
         display: 'flex',
         '& .actions': {
-            marginLeft: '10px'
+            paddingLeft: '10px',
+            '& button' : {
+                marginRight: '10px',
+            }
         }
     },
     loggerContainer: {
@@ -38,7 +43,7 @@ const useStyles = makeStyles({
                 fontSize: 'inherit'
             }
         }
-    }
+    },
 
 
 });
@@ -47,7 +52,8 @@ export const Battle: React.FC = () => {
 
     const style = useStyles();
 
-    const { playerData, enemyData, loggerValue, onPlayerAttack } = useBattleData();
+    const { playerData, enemyData, loggerValue, onPlayerAttack, waiting, onPlayerHealing } = useBattleData();
+    const skillDisabled = waiting || playerData.countMP === 0;
     
     return (
         <Grid container className={style.container}>
@@ -57,9 +63,19 @@ export const Battle: React.FC = () => {
                         <CardItem char={playerData}/>
                     </Card>
                     <div className='actions'>
-                        <Button variant='outlined' color='secondary' onClick={onPlayerAttack}>
+                        <Button variant='outlined' color='secondary' onClick={onPlayerAttack} disabled={waiting}>
                             Attack
                         </Button>
+                        <Badge color="primary" badgeContent='10 MP' >
+                            <Button variant='contained' color='default' onClick={onPlayerHealing} disabled={skillDisabled}>
+                                <img src={heal} alt='heal' />
+                            </Button>
+                        </Badge>
+                        <Badge color="primary" badgeContent='20 MP' >
+                            <Button variant='contained' color='default' disabled={skillDisabled}>
+                                <img src={superAttack} alt='heal' />
+                            </Button>
+                        </Badge>
                         <div className={style.loggerContainer}>
                             <TextField
                                 id="logger"

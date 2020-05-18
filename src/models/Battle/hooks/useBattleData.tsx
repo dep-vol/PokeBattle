@@ -9,8 +9,10 @@ export const useBattleData = () => {
     const playerData = useSelector((state: RootState) => state.initGame.Player);
     const enemyData = useSelector((state: RootState) => state.initGame.Enemy);
     const loggerValue = useSelector((state: RootState) => state.initGame.log.value);
+    const waiting = useSelector((state: RootState) => state.initGame.playerWaiting);
 
     const onPlayerAttack = useCallback(() => dispatch(actions.playerAttack(false)), [dispatch]);
+    const onPlayerHealing = useCallback(() => dispatch(actions.healActivate(false)), [dispatch]);
 
-    return {playerData, enemyData, loggerValue, onPlayerAttack};
+    return {playerData, enemyData, loggerValue, onPlayerAttack, waiting, onPlayerHealing};
 };
