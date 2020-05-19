@@ -8,7 +8,7 @@ import {sendAlert} from './engineSaga';
 /*
  * Calculate damage, base attack, critical damage and result of HP after attack
  */
-export const calcDamage = (attacker: Char, defender: Char, isSpecial: boolean) => {
+export const calcDamage = (attacker: Char, defender: Char, isSpecial: boolean, isCrit: boolean) => {
     const attackerStats: {[key: string]: number} = {};
     const defenderStats: {[key: string]: number} = {};
 
@@ -21,7 +21,7 @@ export const calcDamage = (attacker: Char, defender: Char, isSpecial: boolean) =
     } );
 
     //Calculate possibility of critical attack (~1/5 | ~20%). Result x2 damage or x1
-    const critAttack = (5 - Math.round((Math.random())*5)) === 5 ? 2 : 1;
+    const critAttack = isCrit ? 3 : (5 - Math.round((Math.random())*5)) === 5 ? 2 : 1;
 
     //Calculate base attack on difference between enemies attack stats
     const baseAttack = defenderStats['attack'] - attackerStats['attack'] >=30
@@ -64,9 +64,9 @@ function* isSpecialTurn (attacker: Char, defender: Char, damage: number, isSpeci
     }
 }
 
-export function* turn (attacker: Char, defender: Char, isSpecial: boolean, isEnemy: boolean) {
+export function* turn (attacker: Char, defender: Char, isSpecial: boolean, isEnemy: boolean, isCrit: boolean) {
 
-    const { damage, hp, critAttack } =  yield call(calcDamage, attacker, defender, isSpecial);
+    const { damage, hp, critAttack } =  yield call(calcDamage, attacker, defender, isSpecial, isCrit);
 
     if(isEnemy) {
         yield put(actions.setLogAction('Enemy turn \n'));
@@ -81,6 +81,11 @@ export function* turn (attacker: Char, defender: Char, isSpecial: boolean, isEne
     yield put(actions.makeAttack(hp, isEnemy));
 
     if(critAttack !== 1) {
+        if (isCrit) {
+            const mp = attacker.stats.find(stat => stat.name === 'mp');
+
+            if(mp) yield put(actions.reduceMP(mp.base - 20, isEnemy));
+        }
         yield put(actions.setLogAction('Critical attack!!!! \n'));
         yield put(sendAlert('Critical attack!!!!', isEnemy));
         yield delay(1600);
@@ -119,7 +124,7 @@ export function* turn (attacker: Char, defender: Char, isSpecial: boolean, isEne
             }
 
         } else {
-            yield put(actions.playerAttack(true));
+            yield put(actions.playerAttack(true, false));
         }
 
     }

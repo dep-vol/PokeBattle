@@ -11,22 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5471dbcc-bbd1-4f25-88e5-076d6730730e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/img/heal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/super_attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Battle/saga/skillsSaga.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Battle/saga/turnSaga.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Alert/Alert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Alert/Alert.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/types/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/types/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/App/reducers/appReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/App/reducers/appReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/actions/engineActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/actions/engineActions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/hooks/useBattleData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/hooks/useBattleData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/reducers/gameReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/reducers/gameReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/components/CardItem/CardItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/components/CardItem/CardItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/skillsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/skillsSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/turnSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/turnSaga.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +111,7 @@
       <workItem from="1589464719316" duration="531000" />
       <workItem from="1589471767568" duration="30889000" />
       <workItem from="1589563879788" duration="47297000" />
-      <workItem from="1589743130631" duration="18305000" />
+      <workItem from="1589743130631" duration="23542000" />
     </task>
     <servers />
   </component>
@@ -154,29 +146,29 @@
       <screen x="44" y="0" width="1322" height="768" />
     </state>
     <state x="575" y="115" key="FileChooserDialogImpl/44.0.1322.768@44.0.1322.768" timestamp="1589473913623" />
-    <state width="919" height="192" key="GridCell.Tab.0.bottom" timestamp="1589797200055">
+    <state width="919" height="192" key="GridCell.Tab.0.bottom" timestamp="1589839577932">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589416298002" />
-    <state width="919" height="192" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1589797200055" />
+    <state width="919" height="192" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1589839577932" />
     <state width="888" height="192" key="GridCell.Tab.0.bottom/44.0.1322.768@44.0.1322.768" timestamp="1589577360134" />
-    <state width="919" height="192" key="GridCell.Tab.0.center" timestamp="1589797200053">
+    <state width="919" height="192" key="GridCell.Tab.0.center" timestamp="1589839577931">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589416298001" />
-    <state width="919" height="192" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1589797200053" />
+    <state width="919" height="192" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1589839577931" />
     <state width="888" height="192" key="GridCell.Tab.0.center/44.0.1322.768@44.0.1322.768" timestamp="1589577360133" />
-    <state width="919" height="192" key="GridCell.Tab.0.left" timestamp="1589797200052">
+    <state width="919" height="192" key="GridCell.Tab.0.left" timestamp="1589839577930">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589416298000" />
-    <state width="919" height="192" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1589797200052" />
+    <state width="919" height="192" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1589839577930" />
     <state width="888" height="192" key="GridCell.Tab.0.left/44.0.1322.768@44.0.1322.768" timestamp="1589577360132" />
-    <state width="919" height="192" key="GridCell.Tab.0.right" timestamp="1589797200054">
+    <state width="919" height="192" key="GridCell.Tab.0.right" timestamp="1589839577932">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589416298001" />
-    <state width="919" height="192" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1589797200054" />
+    <state width="919" height="192" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1589839577931" />
     <state width="888" height="192" key="GridCell.Tab.0.right/44.0.1322.768@44.0.1322.768" timestamp="1589577360133" />
     <state x="44" y="0" width="1322" height="768" key="SettingsEditor" timestamp="1589564711245">
       <screen x="44" y="0" width="1322" height="768" />

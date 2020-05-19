@@ -52,7 +52,7 @@ export const Battle: React.FC = () => {
 
     const style = useStyles();
 
-    const { playerData, enemyData, loggerValue, onPlayerAttack, waiting, onPlayerHealing } = useBattleData();
+    const { playerData, enemyData, loggerValue, onPlayerAttack, waiting, onPlayerHealing, onCriticalAttack } = useBattleData();
     const skillDisabled = waiting || playerData.countMP === 0;
     
     return (
@@ -72,7 +72,7 @@ export const Battle: React.FC = () => {
                             </Button>
                         </Badge>
                         <Badge color="primary" badgeContent='20 MP' >
-                            <Button variant='contained' color='default' disabled={skillDisabled}>
+                            <Button variant='contained' color='default' onClick={onCriticalAttack} disabled={skillDisabled}>
                                 <img src={superAttack} alt='heal' />
                             </Button>
                         </Badge>

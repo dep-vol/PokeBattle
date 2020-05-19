@@ -37,7 +37,7 @@ export function* healingSagaWorker ({ isEnemy }: ExtractAction<typeof asyncEngin
 
         yield put(actions.healing(hp, isEnemy));
         yield put(actions.reduceMP(mp, isEnemy));
-        yield put(actions.playerAttack(true));
+        yield put(actions.playerAttack(true, false));
     }
 
     else {

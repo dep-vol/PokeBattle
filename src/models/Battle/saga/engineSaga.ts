@@ -36,13 +36,17 @@ function* engineSagaWorker(action: ExtractAction<typeof asyncEngineActions.attac
                 yield put(actions.healActivate(true));
                 yield put(actions.isWaiting());
             }
+            else if (enemyMP && enemyMP.base > 30 && playerData.countHP > 0.5){
+                yield call(turn, enemyData, playerData, isSpecial, true, true);
+                yield put(actions.isWaiting());
+            }
             else {
-                yield call(turn, enemyData, playerData, isSpecial, true);
+                yield call(turn, enemyData, playerData, isSpecial, true, false);
                 yield put(actions.isWaiting());
             }
         }
         else {
-            yield call(turn, playerData, enemyData, isSpecial, false);
+            yield call(turn, playerData, enemyData, isSpecial, false,  action.isCrit);
         }
     }
     catch (e) {

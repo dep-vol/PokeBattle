@@ -11,8 +11,9 @@ export const useBattleData = () => {
     const loggerValue = useSelector((state: RootState) => state.initGame.log.value);
     const waiting = useSelector((state: RootState) => state.initGame.playerWaiting);
 
-    const onPlayerAttack = useCallback(() => dispatch(actions.playerAttack(false)), [dispatch]);
+    const onPlayerAttack = useCallback(() => dispatch(actions.playerAttack(false, false)), [dispatch]);
     const onPlayerHealing = useCallback(() => dispatch(actions.healActivate(false)), [dispatch]);
+    const onCriticalAttack = useCallback(() => dispatch(actions.playerAttack(false, true)), [dispatch]);
 
-    return {playerData, enemyData, loggerValue, onPlayerAttack, waiting, onPlayerHealing};
+    return {playerData, enemyData, loggerValue, onPlayerAttack, waiting, onPlayerHealing, onCriticalAttack};
 };

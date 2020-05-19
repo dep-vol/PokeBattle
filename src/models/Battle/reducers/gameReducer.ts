@@ -115,9 +115,6 @@ export const gameReducer =(state = initialState, action: GameActions): PlayerSta
 
                 };
         }
-        case 'BATTLE/ENGINE/CANCEL': {
-            return state;
-        }
         default:
             // eslint-disable-next-line
             const x: never = action;
