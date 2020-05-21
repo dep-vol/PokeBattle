@@ -7,6 +7,9 @@ export const asyncEngineActions = {
     isWaitingAction: 'BATTLE/ENGINE/IS_WAITING' as const,
     healAction: 'BATTLE/ENGINE/HEAL_ACTION' as const,
     reduceMPAction: 'BATTLE/ENGINE/REDUCE_MP' as const,
+    pushResultOfTheBattleAction: 'BATTLE/ENGINE/PUSH_RESULT' as const,
+    isLooserAction: 'BATTLE/ENGINE/IS_LOOSER' as const,
+    isWinnerAction: 'BATTLE/ENGINE/IS_WINNER' as const
 };
 
 
@@ -19,5 +22,8 @@ export const engineActions = {
     healActivate: (isEnemy: boolean) => ({type: asyncEngineActions.healAction, isEnemy} as const),
     healing: (hp: number, isEnemy: boolean) => ({type: 'BATTLE/ENGINE/HEALING', hp, isEnemy} as const),
     reduceMP: (mp: number, isEnemy: boolean) => ({type: asyncEngineActions.reduceMPAction, mp, isEnemy} as const),
+    pushResultOfTheBattle:() => ({type: asyncEngineActions.pushResultOfTheBattleAction} as const) ,
+    setIsLooser: () => ({type: asyncEngineActions.isLooserAction} as const),
+    playerIsWinner: () => ({type: asyncEngineActions.isWinnerAction} as const)
 };
 

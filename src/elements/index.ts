@@ -3,3 +3,4 @@ export { Header } from './Header/Header';
 export { Loader } from './Loader/Loader';
 export { Welcome } from './Welcome/Welcome';
 export { Footer } from './Footer/Footer';
+export { Result } from './Result/Result';

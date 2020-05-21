@@ -56,4 +56,10 @@ export type PlayerState = {
         action: string;
     };
     playerWaiting: boolean;
+    resultLog: {
+        enemy: string;
+        log: string;
+    }[];
+    isLooser: boolean;
+    isPlayerWinner: boolean;
 };

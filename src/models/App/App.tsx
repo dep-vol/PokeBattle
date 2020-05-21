@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //UI VENDORS
 import { MuiThemeProvider } from '@material-ui/core/styles';
 //ELEMS
-import { Alert, Footer, Header, Welcome } from 'elements';
+import { Alert, Footer, Header, Welcome, Result } from 'elements';
 //MODELS
 import { CharsList } from 'models/Chars';
 import { theme } from 'init/theme';
-import {Battle} from "../Battle/components/Battle";
+import { Battle } from '../Battle/components/Battle';
 
 const style: React.CSSProperties= {
     display: 'flex',
@@ -27,13 +27,16 @@ export const App: React.FC = () => {
                     <Header/>
                     <Switch>
                         <Route path='/' exact>
-                            <Welcome/>
+                            <Welcome />
                         </Route>
                         <Route path='/chars'>
-                            <CharsList/>
+                            <CharsList />
                         </Route>
                         <Route path='/battle'>
-                            <Battle/>
+                            <Battle />
+                        </Route>
+                        <Route path='/result'>
+                            <Result />
                         </Route>
                     </Switch>
                     <Footer/>

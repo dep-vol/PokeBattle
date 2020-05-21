@@ -1,7 +1,7 @@
 //CORE
 import Axios from 'axios';
 //TYPES
-import {CharApi, GetChar, GetCharactersType} from 'api/types';
+import { CharApi, GetChar, GetCharactersType } from 'api/types';
 
 const instance = Axios.create({baseURL:'https://pokeapi.co/api/v2/'});
 
@@ -45,3 +45,4 @@ export const api = {
         return count;
     }
 };
+

@@ -11,14 +11,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5471dbcc-bbd1-4f25-88e5-076d6730730e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/elements/ExpansionList/ExpansionList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/Result/Result.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/App/reducers/appReducer.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/Alert/Alert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Alert/Alert.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/Welcome/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Welcome/Welcome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/selectors/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/selectors/selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/types/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/types/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/App/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/actions/engineActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/actions/engineActions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/hooks/useBattleData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/hooks/useBattleData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/reducers/gameReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/reducers/gameReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/skillsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/skillsSaga.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/turnSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/turnSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Chars/actions/charsActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/actions/charsActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Chars/hooks/useFetchChars.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/hooks/useFetchChars.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Chars/reducers/charsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/reducers/charsReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +74,9 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="ts.rename.search.for.dynamic.occurrences" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -111,7 +127,8 @@
       <workItem from="1589464719316" duration="531000" />
       <workItem from="1589471767568" duration="30889000" />
       <workItem from="1589563879788" duration="47297000" />
-      <workItem from="1589743130631" duration="23542000" />
+      <workItem from="1589743130631" duration="24433000" />
+      <workItem from="1589990690392" duration="17390000" />
     </task>
     <servers />
   </component>
@@ -146,36 +163,37 @@
       <screen x="44" y="0" width="1322" height="768" />
     </state>
     <state x="575" y="115" key="FileChooserDialogImpl/44.0.1322.768@44.0.1322.768" timestamp="1589473913623" />
-    <state width="919" height="192" key="GridCell.Tab.0.bottom" timestamp="1589839577932">
+    <state width="919" height="192" key="GridCell.Tab.0.bottom" timestamp="1590076436147">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589416298002" />
-    <state width="919" height="192" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1589839577932" />
+    <state width="919" height="192" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1590076436147" />
     <state width="888" height="192" key="GridCell.Tab.0.bottom/44.0.1322.768@44.0.1322.768" timestamp="1589577360134" />
-    <state width="919" height="192" key="GridCell.Tab.0.center" timestamp="1589839577931">
+    <state width="919" height="192" key="GridCell.Tab.0.center" timestamp="1590076436146">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589416298001" />
-    <state width="919" height="192" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1589839577931" />
+    <state width="919" height="192" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1590076436146" />
     <state width="888" height="192" key="GridCell.Tab.0.center/44.0.1322.768@44.0.1322.768" timestamp="1589577360133" />
-    <state width="919" height="192" key="GridCell.Tab.0.left" timestamp="1589839577930">
+    <state width="919" height="192" key="GridCell.Tab.0.left" timestamp="1590076436146">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589416298000" />
-    <state width="919" height="192" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1589839577930" />
+    <state width="919" height="192" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1590076436146" />
     <state width="888" height="192" key="GridCell.Tab.0.left/44.0.1322.768@44.0.1322.768" timestamp="1589577360132" />
-    <state width="919" height="192" key="GridCell.Tab.0.right" timestamp="1589839577932">
+    <state width="919" height="192" key="GridCell.Tab.0.right" timestamp="1590076436147">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1366" height="168" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589416298001" />
-    <state width="919" height="192" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1589839577931" />
+    <state width="919" height="192" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1590076436147" />
     <state width="888" height="192" key="GridCell.Tab.0.right/44.0.1322.768@44.0.1322.768" timestamp="1589577360133" />
-    <state x="44" y="0" width="1322" height="768" key="SettingsEditor" timestamp="1589564711245">
-      <screen x="44" y="0" width="1322" height="768" />
+    <state x="0" y="24" width="1322" height="768" key="SettingsEditor" timestamp="1590093469569">
+      <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="203" y="0" key="SettingsEditor/0.0.1366.727@0.0.1366.727" timestamp="1589455033219" />
     <state x="172" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589416563303" />
     <state x="203" y="0" key="SettingsEditor/0.0.1366.732@0.0.1366.732" timestamp="1589464790584" />
+    <state x="0" y="24" key="SettingsEditor/0.24.1366.744@0.24.1366.744" timestamp="1590093469569" />
     <state x="44" y="0" width="1322" height="768" key="SettingsEditor/44.0.1322.768@44.0.1322.768" timestamp="1589564711245" />
     <state x="425" y="197" key="jetbrains.nodejs.interpreters-dialog" timestamp="1589481285232">
       <screen x="44" y="0" width="1322" height="768" />

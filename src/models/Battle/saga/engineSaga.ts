@@ -6,9 +6,9 @@ import { asyncEngineActions } from '../actions/engineActions';
 
 import { EnemyDataType, getEnemyData, getPlayerData, PlayerDataType } from '../../../init/selectors/selectors';
 
-import {Alert} from 'init/types/store';
-import {healingSagaWorker} from './skillsSaga';
-import {turn} from './turnSaga';
+import { Alert } from 'init/types/store';
+import { healingSagaWorker } from './skillsSaga';
+import { turn } from './turnSaga';
 
 
 /*
@@ -22,7 +22,9 @@ export const sendAlert = ( msg: string, isEnemy: boolean, type: Alert['type'] = 
 
 
 function* engineSagaWorker(action: ExtractAction<typeof asyncEngineActions.attackAction>): SagaIterator<void> {
+    
     if (!action.isEnemy) yield put(actions.isWaiting());
+    
     const playerData: PlayerDataType = yield select(getPlayerData);
     const enemyData: EnemyDataType = yield select(getEnemyData);
     const enemyMP = enemyData.stats.find(stat => stat.name === 'mp');

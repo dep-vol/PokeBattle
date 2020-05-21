@@ -1,23 +1,23 @@
 //CORE
 import { useEffect, useCallback } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
-//TYPES
-import { RootState } from 'init/store';
+
 //BLL
 import { actions } from 'init/rootActions';
 import { useHistory } from 'react-router-dom';
+import { getLoadingState, getGameStartState, getChars, getOffset, getRequestLimit } from 'init/selectors/selectors';
 
 export const useFetchChars = () => {
 
     const dispatch = useDispatch();
 
-    const loadingChars = useSelector((state: RootState) => state.charsState.isLoading, shallowEqual);
-    const gameStart = useSelector((state: RootState) => state.initGame.gameStart, shallowEqual);
+    const loadingChars = useSelector(getLoadingState, shallowEqual);
+    const gameStart = useSelector(getGameStartState, shallowEqual);
     const isLoading = loadingChars || gameStart;
 
-    const chars =  useSelector((state: RootState) => state.charsState.chars, shallowEqual);
-    const offset = useSelector((state: RootState) => state.charsState.offset, shallowEqual);
-    const requestLimit = useSelector((state: RootState) => state.charsState.requestLimit, shallowEqual);
+    const chars =  useSelector(getChars, shallowEqual);
+    const offset = useSelector(getOffset, shallowEqual);
+    const requestLimit = useSelector(getRequestLimit, shallowEqual);
 
 
     const history = useHistory();

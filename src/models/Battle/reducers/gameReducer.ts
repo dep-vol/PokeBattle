@@ -27,7 +27,10 @@ const initialState: PlayerState = {
         value:'',
         action:''
     },
-    playerWaiting: false
+    playerWaiting: false,
+    resultLog: [],
+    isLooser: false,
+    isPlayerWinner: false
 
 };
 
@@ -114,6 +117,22 @@ export const gameReducer =(state = initialState, action: GameActions): PlayerSta
                     },
 
                 };
+
+        }
+        case 'BATTLE/ENGINE/PUSH_RESULT': {
+            return {
+                ...state, resultLog: [...state.resultLog, {enemy: state.Enemy.name, log: state.log.value}]
+            };
+        }
+        case 'BATTLE/ENGINE/IS_LOOSER': {
+            return {
+                ...state, isLooser: true
+            };
+        }
+        case 'BATTLE/ENGINE/IS_WINNER': {
+            return {
+                ...state, isPlayerWinner: true
+            };
         }
         default:
             // eslint-disable-next-line

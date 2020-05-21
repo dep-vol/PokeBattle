@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import heal from 'img/heal.png';
 import superAttack from 'img/super_attack.png';
+import {Redirect} from 'react-router-dom';
 
 const useStyles = makeStyles({
     container: {
@@ -23,8 +24,11 @@ const useStyles = makeStyles({
     },
     playerCard: {
         display: 'flex',
+        flexWrap: 'wrap',
+        marginBottom: '10px',
         '& .actions': {
             paddingLeft: '10px',
+            margin: '10px 0',
             '& button' : {
                 marginRight: '10px',
             }
@@ -52,9 +56,18 @@ export const Battle: React.FC = () => {
 
     const style = useStyles();
 
-    const { playerData, enemyData, loggerValue, onPlayerAttack, waiting, onPlayerHealing, onCriticalAttack } = useBattleData();
+    const {
+        playerData, enemyData, loggerValue,
+        onPlayerAttack, waiting, onPlayerHealing,
+        onCriticalAttack, isLooser, isPlayerWinner, critAttackDisable
+    } = useBattleData();
+
     const skillDisabled = waiting || playerData.countMP === 0;
-    
+
+    if (isPlayerWinner || isLooser) {
+        return <Redirect to='/result'/>;
+    }
+
     return (
         <Grid container className={style.container}>
             <Grid item xs={12} className={style.playersContainer}>
@@ -72,7 +85,7 @@ export const Battle: React.FC = () => {
                             </Button>
                         </Badge>
                         <Badge color="primary" badgeContent='20 MP' >
-                            <Button variant='contained' color='default' onClick={onCriticalAttack} disabled={skillDisabled}>
+                            <Button variant='contained' color='default' onClick={onCriticalAttack} disabled={skillDisabled || critAttackDisable}>
                                 <img src={superAttack} alt='heal' />
                             </Button>
                         </Badge>

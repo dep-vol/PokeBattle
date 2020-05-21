@@ -4,7 +4,7 @@ import { SagaIterator } from 'redux-saga';
 //TYPES
 import { Char } from 'init/types/store';
 //BLL
-import { actions, ExtractAction, asyncActions } from 'init/rootActions';
+import { actions, ExtractAction } from 'init/rootActions';
 import { api } from 'api/api';
 import { getOffsetAndLimit, OffsetAndLimit } from 'init/selectors/selectors';
 import { charsAsyncActions } from '../actions/charsActions';

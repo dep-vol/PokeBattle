@@ -16,6 +16,7 @@ export const Alert: React.FC = () => {
     const dispatch = useDispatch();
 
     const [open, setOpen] = useState(false);
+    
     const handleClose = useCallback(() => {
         setOpen(false);
         dispatch(actions.setMsg({ type: undefined, msg:''}));

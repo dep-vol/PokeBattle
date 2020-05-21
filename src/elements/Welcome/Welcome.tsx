@@ -1,14 +1,17 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Paper  from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
-import { useHistory } from 'react-router-dom';
 
-export const Welcome = () => {
+
+export const Welcome: React.FC = () => {
 
     const history = useHistory();
+
     const handleClick = () => {
         history.push('/chars');
     };
@@ -16,7 +19,7 @@ export const Welcome = () => {
     return (
         <Grid container>
             <Grid item xs={12}>
-                <Box mb={3}>
+                <Box my={3}>
                     <Typography align='center' variant='h4' color='textPrimary'>
                         Welcome to the PokeBattle!
                     </Typography>
@@ -25,7 +28,7 @@ export const Welcome = () => {
             <Grid container justify='center'>
                 <Grid item xs={10}>
                     <Paper elevation={8}>
-                        <Box p={3}>
+                        <Box p={3} mb={3}>
                             <Typography align='center' variant='h6' color='textPrimary' gutterBottom>
                                 About:
                             </Typography>

@@ -1,9 +1,9 @@
-import {Char} from '../../../init/types/store';
-import {call, delay, put, select} from 'redux-saga/effects';
-import {actions} from '../../../init/rootActions';
-import {getEnemyCountHP, getPlayerCountHP, getPlayers} from '../../../init/selectors/selectors';
-import {RootState} from '../../../init/store';
-import {sendAlert} from './engineSaga';
+import { Char } from '../../../init/types/store';
+import { call, delay, put, select } from 'redux-saga/effects';
+import { actions } from '../../../init/rootActions';
+import { getEnemyCountHP, getPlayerCountHP, getPlayers } from '../../../init/selectors/selectors';
+import { RootState } from '../../../init/store';
+import { sendAlert } from './engineSaga';
 
 /*
  * Calculate damage, base attack, critical damage and result of HP after attack
@@ -44,89 +44,114 @@ export const calcDamage = (attacker: Char, defender: Char, isSpecial: boolean, i
     return {damage: Math.round(defineDamage), hp: Math.round(hp), critAttack};
 };
 
-/*
- * Saga for work undo special defence if switched or common attack
- */
+/**
+ ** Saga for work undo special defence if switched or common attack
+ **/
 function* isSpecialTurn (attacker: Char, defender: Char, damage: number, isSpecial: boolean, isEnemy: boolean) {
 
-    const attackMsg = `${attacker.name} attack ${defender.name} and make ${damage} damage \n\n`;
-    const specDefMsg = 'Special defense activated!!! \n';
+    try {
+        const attackMsg = `${attacker.name} attack ${defender.name} and make ${damage} damage \n\n`;
+        const specDefMsg = 'Special defense activated!!! \n';
 
-    if(isSpecial) {
-        yield put(actions.setLogAction(specDefMsg));
-        yield put(sendAlert(specDefMsg, isEnemy, 'warning'));
-        yield delay(1600);
-        yield put(actions.setLogAction(attackMsg));
+        if (isSpecial) {
+            yield put(actions.setLogAction(specDefMsg));
+            yield put(sendAlert(specDefMsg, isEnemy, 'warning'));
+            yield delay(1600);
+            yield put(actions.setLogAction(attackMsg));
+        }
+        else {
+            yield put(actions.setLogAction(attackMsg));
+            yield put(sendAlert(` - ${damage}`, isEnemy));
+        }
+    } catch (error) {
+        yield put(actions.setMsg({type: 'error', msg: error.message}));
     }
-    else {
-        yield put(actions.setLogAction(attackMsg));
-        yield put(sendAlert(` - ${damage}`, isEnemy));
-    }
+    
 }
 
 export function* turn (attacker: Char, defender: Char, isSpecial: boolean, isEnemy: boolean, isCrit: boolean) {
 
-    const { damage, hp, critAttack } =  yield call(calcDamage, attacker, defender, isSpecial, isCrit);
-
-    if(isEnemy) {
-        yield put(actions.setLogAction('Enemy turn \n'));
-        yield delay(1500);
-    }
-    else {
-        yield put(actions.setLogAction('Your turn \n'));
-    }
-
-    yield delay(500);
-
-    yield put(actions.makeAttack(hp, isEnemy));
-
-    if(critAttack !== 1) {
-        if (isCrit) {
-            const mp = attacker.stats.find(stat => stat.name === 'mp');
-
-            if(mp) yield put(actions.reduceMP(mp.base - 20, isEnemy));
+    try {
+        const { damage, hp, critAttack } =  yield call(calcDamage, attacker, defender, isSpecial, isCrit);
+        
+        //Init messages of turn
+        if(isEnemy) {
+            yield put(actions.setLogAction('Enemy turn \n'));
+            yield delay(1500);
         }
-        yield put(actions.setLogAction('Critical attack!!!! \n'));
-        yield put(sendAlert('Critical attack!!!!', isEnemy));
-        yield delay(1600);
-    }
-
-    yield call(isSpecialTurn, attacker, defender, damage, isSpecial, isEnemy);
-
-    if(isEnemy) {
-        const playerCountHP = yield select(getPlayerCountHP);
-
-        if(playerCountHP <=0) {
-            yield put(actions.setLogAction(`${attacker.name} WIN!!!`));
-            yield put(actions.setMsg({type: 'warning', msg: 'You are looser, try more!!!'}));
+        else {
+            yield put(actions.setLogAction('Your turn \n'));
         }
-    }
-    else {
-        const enemyCountHP = yield select(getEnemyCountHP);
-
-        if (enemyCountHP <= 0) {
-            yield put(actions.setLogAction(`${attacker.name} WIN!!!`));
-            yield put(actions.setCharPlayed(defender.name));
-            const {enemy: newEnemy, player} = yield select((state: RootState) => getPlayers(state, attacker.name));
-            if (newEnemy) {
-                yield put(actions.setMsg({
-                    type: 'success',
-                    msg: 'Congratulations! You are the winner, but show must go on!',
-                    anchor: {horizontal:'center', vertical:'top'}
-                }));
-                yield delay(3000);
-                yield put(actions.clearLog());
-                yield put(actions.loadPlayer(player));
-                yield put(actions.loadEnemy(newEnemy));
-                yield put(actions.isWaiting());
-            } else {
-                yield put(actions.setMsg({type: 'success', msg: 'Congratulations! You are the champion my friend',  anchor: {horizontal:'center', vertical:'top'}}));
+    
+        yield delay(500);
+        
+        //Make ordinary attack
+        yield put(actions.makeAttack(hp, isEnemy));
+    
+        //Critical attack and crit skill section
+        if(critAttack !== 1) {
+            if (isCrit) {
+                const mp = attacker.stats.find(stat => stat.name === 'mp');
+    
+                if(mp && mp.base >= 20) yield put(actions.reduceMP(mp.base - 20, isEnemy));
             }
-
-        } else {
-            yield put(actions.playerAttack(true, false));
+            yield put(actions.setLogAction('Critical attack!!!! \n'));
+            yield put(sendAlert('Critical attack!!!!', isEnemy));
+            yield delay(1600);
         }
-
+        
+        //Define special turn
+        yield call(isSpecialTurn, attacker, defender, damage, isSpecial, isEnemy);
+    
+        //Calculate winner logic
+        if(isEnemy) {
+            const playerCountHP = yield select(getPlayerCountHP);
+    
+            if(playerCountHP <=0) {
+                yield put(actions.setLogAction(`${attacker.name} WIN!!!`));
+                yield put(actions.setMsg({type: 'warning', msg: 'You are looser, try more!!!'}));
+                yield delay(2000);
+                yield put(actions.setIsLooser());
+            }
+        }
+        else {
+            const enemyCountHP = yield select(getEnemyCountHP);
+    
+            if (enemyCountHP <= 0) {
+                yield put(actions.setLogAction(`${attacker.name} WIN!!!`));
+                yield put(actions.pushResultOfTheBattle());
+                yield put(actions.setCharPlayed(defender.name));
+                const {enemy: newEnemy, player} = yield select((state: RootState) => getPlayers(state, attacker.name));
+                if (newEnemy) {
+                    yield put(actions.setMsg({
+                        type: 'success',
+                        msg: 'Congratulations! You are the winner, but show must go on!',
+                        anchor: {horizontal:'center', vertical:'top'}
+                    }));
+                    yield delay(3000);
+                    yield put(actions.clearLog());
+                    yield put(actions.loadPlayer(player));
+                    yield put(actions.loadEnemy(newEnemy));
+                    yield put(actions.isWaiting());
+                } else {
+                    yield put(actions.setMsg({type: 'success', msg: 'Congratulations! You are the champion my friend',  anchor: {horizontal:'center', vertical:'top'}}));
+                    yield delay(2000);
+                    yield put(actions.playerIsWinner());
+                }
+    
+            } else {
+                //switch to enemy turn
+                yield put(actions.playerAttack(true, false));
+            }
+    
+        } 
+    } catch (error) {
+        yield put(actions.setMsg({type: 'error', msg: error.message}));
     }
+    
 
 }
+
+
+
+
