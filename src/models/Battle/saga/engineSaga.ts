@@ -59,7 +59,7 @@ function* engineSagaWorker(action: ExtractAction<typeof asyncEngineActions.attac
 
 
 
-export default function* engineSagaWatcher(): Generator {
+export function* engineSagaWatcher(): Generator {
     yield all([
         takeEvery(asyncEngineActions.attackAction, engineSagaWorker),
         takeEvery(asyncEngineActions.healAction, healingSagaWorker)

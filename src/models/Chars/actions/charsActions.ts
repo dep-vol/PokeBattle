@@ -20,7 +20,6 @@ export const charsActions = {
     **ASYNC ACTION_CREATORS
     **************************************/
     charsRequest: (offset = 0) => ({type: charsAsyncActions.CHARS_REQUEST, offset} as const),
-    clearState: () => ({type: 'CHARS/CLEAR_STATE'} as const)
 };
 
 export type CharsActionsType = ReturnType<inferValues<typeof charsActions>>;

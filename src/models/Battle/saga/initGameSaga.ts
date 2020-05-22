@@ -1,6 +1,6 @@
 import { takeEvery, select, put, call } from 'redux-saga/effects';
 import { actions, ExtractAction } from '../../../init/rootActions';
-import { SagaIterator } from '@redux-saga/types';
+import { SagaIterator } from '@redux-saga/types/';
 import { asyncInitGameActions } from '../actions/initGameActions';
 import { RootState } from '../../../init/store';
 import { getPlayers, PlayersSelectType } from '../../../init/selectors/selectors';
@@ -28,6 +28,6 @@ function* initGameWorker({playerCharName, history}: ExtractAction<typeof asyncIn
 }
 
 
-export default function* initGameWatcher (): Generator {
+export function* initGameWatcher (): Generator {
     yield takeEvery(asyncInitGameActions.INIT_GAME_ACTION, initGameWorker);
 }

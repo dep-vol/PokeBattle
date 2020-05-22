@@ -11,28 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5471dbcc-bbd1-4f25-88e5-076d6730730e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/elements/ExpansionList/ExpansionList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/elements/Result/Result.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/App/reducers/appReducer.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Chars/reducers/charsReducer.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Alert/Alert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Alert/Alert.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Welcome/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Welcome/Welcome.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/selectors/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/selectors/selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/types/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/types/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/App/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/actions/engineActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/actions/engineActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/hooks/useBattleData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/hooks/useBattleData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/reducers/gameReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/reducers/gameReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/rootSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/rootSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/init/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/turnSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/turnSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/actions/charsActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/actions/charsActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/hooks/useFetchChars.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/hooks/useFetchChars.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/reducers/charsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/reducers/charsReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/initGameSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/initGameSaga.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +112,8 @@
       <workItem from="1589471767568" duration="30889000" />
       <workItem from="1589563879788" duration="47297000" />
       <workItem from="1589743130631" duration="24433000" />
-      <workItem from="1589990690392" duration="17390000" />
+      <workItem from="1589990690392" duration="19111000" />
+      <workItem from="1590145576521" duration="7130000" />
     </task>
     <servers />
   </component>
@@ -155,6 +140,10 @@
       <screen x="44" y="0" width="1322" height="768" />
     </state>
     <state x="163" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog/44.0.1322.768@44.0.1322.768" timestamp="1589481341950" />
+    <state x="492" y="106" key="#com.intellij.ide.util.MemberChooser" timestamp="1590161777626">
+      <screen x="0" y="24" width="1366" height="744" />
+    </state>
+    <state x="492" y="106" key="#com.intellij.ide.util.MemberChooser/0.24.1366.744@0.24.1366.744" timestamp="1590161777626" />
     <state x="438" y="135" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589541243630">
       <screen x="44" y="0" width="1322" height="768" />
     </state>

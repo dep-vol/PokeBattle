@@ -32,10 +32,6 @@ export const charsReducer = (state = initialState, action: CharsActionsType): Ch
                     : char;
             })};
         }
-        case 'CHARS/CLEAR_STATE': {
-            return {...initialState};
-        }
-
         default:
             // eslint-disable-next-line 
             const x: never = action;

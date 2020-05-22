@@ -41,6 +41,6 @@ function* fetchCharsWorker({offset}: ExtractAction<typeof charsAsyncActions.CHAR
     }
 }
 
-export default function* fetchCharsWatcher(): Generator {
+export function* fetchCharsWatcher(): Generator {
     yield takeEvery(charsAsyncActions.CHARS_REQUEST, fetchCharsWorker);
 }
