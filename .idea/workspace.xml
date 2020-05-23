@@ -11,13 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5471dbcc-bbd1-4f25-88e5-076d6730730e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/models/Chars/reducers/charsReducer.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Battle/reducers/gameReducer.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/rootSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/rootSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/init/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/init/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/initGameSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/initGameSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +54,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="ts.rename.search.for.dynamic.occurrences" value="true" />
   </component>
@@ -113,7 +109,7 @@
       <workItem from="1589563879788" duration="47297000" />
       <workItem from="1589743130631" duration="24433000" />
       <workItem from="1589990690392" duration="19111000" />
-      <workItem from="1590145576521" duration="7130000" />
+      <workItem from="1590145576521" duration="19524000" />
     </task>
     <servers />
   </component>
@@ -176,14 +172,18 @@
     <state width="1366" height="168" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589416298001" />
     <state width="919" height="192" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1590076436147" />
     <state width="888" height="192" key="GridCell.Tab.0.right/44.0.1322.768@44.0.1322.768" timestamp="1589577360133" />
-    <state x="0" y="24" width="1322" height="768" key="SettingsEditor" timestamp="1590093469569">
+    <state x="0" y="24" width="1322" height="768" key="SettingsEditor" timestamp="1590177431665">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="203" y="0" key="SettingsEditor/0.0.1366.727@0.0.1366.727" timestamp="1589455033219" />
     <state x="172" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589416563303" />
     <state x="203" y="0" key="SettingsEditor/0.0.1366.732@0.0.1366.732" timestamp="1589464790584" />
-    <state x="0" y="24" key="SettingsEditor/0.24.1366.744@0.24.1366.744" timestamp="1590093469569" />
+    <state x="0" y="24" key="SettingsEditor/0.24.1366.744@0.24.1366.744" timestamp="1590177431665" />
     <state x="44" y="0" width="1322" height="768" key="SettingsEditor/44.0.1322.768@44.0.1322.768" timestamp="1589564711245" />
+    <state x="0" y="24" width="587" height="744" key="find.popup" timestamp="1590175662417">
+      <screen x="0" y="24" width="1366" height="744" />
+    </state>
+    <state x="0" y="24" width="587" height="744" key="find.popup/0.24.1366.744@0.24.1366.744" timestamp="1590175662417" />
     <state x="425" y="197" key="jetbrains.nodejs.interpreters-dialog" timestamp="1589481285232">
       <screen x="44" y="0" width="1322" height="768" />
     </state>
