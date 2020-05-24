@@ -89,5 +89,4 @@ describe('fetchCharsWorker', () => {
         //eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         expect((generator.throw!(new Error('error')).value)).toEqual(put(actions.setMsg({type: 'error', msg: 'server error, try later'})));
     });
-
 });
