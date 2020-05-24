@@ -3,11 +3,9 @@ import Axios from 'axios';
 //TYPES
 import { CharApi, GetChar, GetCharactersType } from 'api/types';
 
-const instance = Axios.create({baseURL:'https://pokeapi.co/api/v2/'});
-
 export const api = {
     getChar: async (charUrl: string): Promise<CharApi> => {
-        const response = await instance.get<GetChar>(charUrl);
+        const response = await Axios.get<GetChar>(charUrl);
         const { name, sprites, stats, weight } = response.data;
         const hp = stats.find((el) => el.stat.name === 'hp');
         const mappedStats = stats.map((el) => {
@@ -17,9 +15,12 @@ export const api = {
             };
         });
         const def = mappedStats.find(stat => stat.name === 'defense');
-        def && def.base <= 60
-            ? mappedStats.push({name: 'mp', base: 40})
-            : mappedStats.push({name: 'mp', base: 20});
+
+        if(def) {
+            def.base <= 60
+                ? mappedStats.push({name: 'mp', base: 40})
+                : mappedStats.push({name: 'mp', base: 20});
+        }
 
         const mp = mappedStats.find(stat => stat.name === 'mp');
 
@@ -33,14 +34,14 @@ export const api = {
         };
     },
     getCharacters: async (offset = 0): Promise<CharApi[]> => {
-        const response = await instance.get<GetCharactersType>(`pokemon/?offset=${offset}&limit=6`);
+        const response = await Axios.get<GetCharactersType>(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=6`);
         const charactersBase = response.data.results;
         return Promise.all(charactersBase.map((el) => {
             return api.getChar(el.url);
         }));
     },
     getCount: async (): Promise<number> => {
-        const response = await instance.get('pokemon');
+        const response = await Axios.get('https://pokeapi.co/api/v2/pokemon/pokemon');
         const { count } = response.data;
         return count;
     }
