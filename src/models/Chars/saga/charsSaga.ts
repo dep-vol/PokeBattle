@@ -9,18 +9,18 @@ import { api } from 'api/api';
 import { getOffsetAndLimit, OffsetAndLimit } from 'init/selectors/selectors';
 import { charsAsyncActions } from '../actions/charsActions';
 
-function* getCountWorker (): SagaIterator<void> {
+export function* getCountWorker (): SagaIterator<void> {
     const count: number = yield call(api.getCount);
     yield put(actions.setCharsCount(count));
 }
 
-function* getCharsDataWorker (offset: number): SagaIterator<void> {
+export function* getCharsDataWorker (offset: number): SagaIterator<void> {
     const charsData: Char[] = yield call(api.getCharacters, offset);
     yield put(actions.charsRequestSuccess(charsData));
 }
 
 
-function* onLoadCharsAlertsWorker (): SagaIterator<void> {
+export function* onLoadCharsAlertsWorker (): SagaIterator<void> {
     const requestParams: OffsetAndLimit = yield select(getOffsetAndLimit);
     requestParams.offset < requestParams.requestLimit 
         ? yield put(actions.setMsg({type: 'success', msg: 'Randomly chars have loaded'})) 
@@ -28,7 +28,7 @@ function* onLoadCharsAlertsWorker (): SagaIterator<void> {
 }
 
 
-function* fetchCharsWorker({offset}: ExtractAction<typeof charsAsyncActions.CHARS_REQUEST>): SagaIterator<void>{
+export function* fetchCharsWorker({offset}: ExtractAction<typeof charsAsyncActions.CHARS_REQUEST>): SagaIterator<void>{
     try {
         yield call(getCountWorker);
         yield call(getCharsDataWorker,offset);        

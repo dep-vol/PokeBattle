@@ -11,11 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5471dbcc-bbd1-4f25-88e5-076d6730730e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/api.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +109,7 @@
       <workItem from="1589563879788" duration="47297000" />
       <workItem from="1589743130631" duration="24433000" />
       <workItem from="1589990690392" duration="19111000" />
-      <workItem from="1590145576521" duration="34876000" />
+      <workItem from="1590145576521" duration="44649000" />
     </task>
     <servers />
   </component>
@@ -222,6 +220,10 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="919" height="192" key="GridCell.Tab.3.right/0.24.1366.744@0.24.1366.744" timestamp="1590271058222" />
+    <state x="476" y="82" key="RollbackChangesDialog" timestamp="1590328380872">
+      <screen x="0" y="24" width="1366" height="744" />
+    </state>
+    <state x="476" y="82" key="RollbackChangesDialog/0.24.1366.744@0.24.1366.744" timestamp="1590328380872" />
     <state x="0" y="24" width="1322" height="768" key="SettingsEditor" timestamp="1590177431665">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
