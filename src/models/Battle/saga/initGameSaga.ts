@@ -6,7 +6,7 @@ import { RootState } from '../../../init/store';
 import { getPlayers, PlayersSelectType } from '../../../init/selectors/selectors';
 
 
-function* initGameWorker({playerCharName, history}: ExtractAction<typeof asyncInitGameActions.INIT_GAME_ACTION>): SagaIterator<void> {
+export function* initGameWorker({playerCharName, history}: ExtractAction<typeof asyncInitGameActions.INIT_GAME_ACTION>): SagaIterator<void> {
     try {
         const goToBattle = () => history.push('/battle');
 
