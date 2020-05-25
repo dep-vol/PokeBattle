@@ -11,9 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5471dbcc-bbd1-4f25-88e5-076d6730730e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Battle/saga/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Chars/saga/charsSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/turnSaga.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/turnSaga.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/turnSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/turnSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +112,7 @@
       <workItem from="1589563879788" duration="47297000" />
       <workItem from="1589743130631" duration="24433000" />
       <workItem from="1589990690392" duration="19111000" />
-      <workItem from="1590145576521" duration="44649000" />
+      <workItem from="1590145576521" duration="68131000" />
     </task>
     <servers />
   </component>
