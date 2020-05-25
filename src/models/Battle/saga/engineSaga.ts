@@ -21,7 +21,7 @@ export const sendAlert = ( msg: string, isEnemy: boolean, type: Alert['type'] = 
 };
 
 
-function* engineSagaWorker(action: ExtractAction<typeof asyncEngineActions.attackAction>): SagaIterator<void> {
+export function* engineSagaWorker(action: ExtractAction<typeof asyncEngineActions.attackAction>): SagaIterator<void> {
     
     if (!action.isEnemy) yield put(actions.isWaiting());
     
