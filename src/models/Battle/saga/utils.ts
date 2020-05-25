@@ -3,6 +3,27 @@
  */
 import { Char } from '../../../init/types/store';
 
+//Calculate possibility of critical attack (~1/5 | ~20%). Result x2 damage or x1
+const calculateCritAttackPossibility = (isCrit: boolean) => {
+    return isCrit ? 3 : (5 - Math.round((Math.random())*5)) === 5 ? 2 : 1;
+};
+
+//Calculate base attack on difference between enemies attack stats
+const calculateBaseAttack = (defenderAttack: number, attackerAttack: number) => {
+    return defenderAttack - attackerAttack >=30
+        ? 21
+        : defenderAttack - attackerAttack >=20
+            ? 12
+            : 4;
+};
+
+//If attacker attack stat larger - make weakening on his defense from 5~10
+const calculateDefenderShield = (defenderAttack: number, attackerAttack: number, defenderDefense: number) => {
+    return attackerAttack > defenderAttack
+        ? defenderDefense
+        : defenderDefense - (Math.round(Math.random()*5) + 5);
+}
+
 export const calcDamage = (attacker: Char, defender: Char, isSpecial: boolean, isCrit: boolean) => {
     const attackerStats: {[key: string]: number} = {};
     const defenderStats: {[key: string]: number} = {};
@@ -15,21 +36,11 @@ export const calcDamage = (attacker: Char, defender: Char, isSpecial: boolean, i
         defenderStats[stat.name] = stat.base;
     } );
 
-    //Calculate possibility of critical attack (~1/5 | ~20%). Result x2 damage or x1
-    const critAttack = isCrit ? 3 : (5 - Math.round((Math.random())*5)) === 5 ? 2 : 1;
+    const critAttack = calculateCritAttackPossibility(isCrit);
 
-    //Calculate base attack on difference between enemies attack stats
-    const baseAttack = defenderStats['attack'] - attackerStats['attack'] >=30
-        ? 21
-        : defenderStats['attack'] - attackerStats['attack'] >=20
-            ? 12
-            : 4;
+    const baseAttack = calculateBaseAttack(defenderStats['attack'], attackerStats['attack']);
 
-    //If attacker attack stat larger - make weakening on his defense from 5~10
-    const defenderShield = attackerStats['attack'] > defenderStats['attack']
-        ? defenderStats['defense']
-        : defenderStats['defense'] - (Math.round(Math.random()*5) + 5);
-
+    const defenderShield = calculateDefenderShield(defenderStats['attack'], attackerStats['attack'], defenderStats['defense']);
 
     const damage = (((attackerStats['attack'] * baseAttack / defenderShield) * attackerStats['speed']) * critAttack) / (Math.sqrt(defenderStats['hp'] * defenderStats['defense']));
     const specDamage = attackerStats['special-attack'] / defenderStats['special-defense'];
