@@ -11,9 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5471dbcc-bbd1-4f25-88e5-076d6730730e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Battle/components/battle.spec.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/saga/engineSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Battle/components/Battle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +111,7 @@
       <workItem from="1589563879788" duration="47297000" />
       <workItem from="1589743130631" duration="24433000" />
       <workItem from="1589990690392" duration="19111000" />
-      <workItem from="1590145576521" duration="77615000" />
+      <workItem from="1590145576521" duration="91529000" />
     </task>
     <servers />
   </component>
@@ -232,6 +234,10 @@
     <state x="203" y="0" key="SettingsEditor/0.0.1366.732@0.0.1366.732" timestamp="1589464790584" />
     <state x="0" y="24" key="SettingsEditor/0.24.1366.744@0.24.1366.744" timestamp="1590177431665" />
     <state x="44" y="0" width="1322" height="768" key="SettingsEditor/44.0.1322.768@44.0.1322.768" timestamp="1589564711245" />
+    <state x="96" y="100" width="1174" height="572" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1590532847872">
+      <screen x="0" y="24" width="1366" height="744" />
+    </state>
+    <state x="96" y="100" width="1174" height="572" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.24.1366.744@0.24.1366.744" timestamp="1590532847872" />
     <state x="236" y="109" width="1092" height="553" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1590271055148">
       <screen x="0" y="24" width="1366" height="744" />
     </state>

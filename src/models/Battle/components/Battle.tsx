@@ -71,22 +71,40 @@ export const Battle: React.FC = () => {
     return (
         <Grid container className={style.container}>
             <Grid item xs={12} className={style.playersContainer}>
-                <div className={style.playerCard}>
+                <div className={style.playerCard} data-testid= 'player card'>
                     <Card className={style.card}>
                         <CardItem char={playerData}/>
                     </Card>
                     <div className='actions'>
-                        <Button variant='outlined' color='secondary' onClick={onPlayerAttack} disabled={waiting}>
+                        <Button
+                            variant='outlined'
+                            color='secondary'
+                            onClick={onPlayerAttack}
+                            disabled={waiting}
+                            data-testid='attack-btn'
+                        >
                             Attack
                         </Button>
                         <Badge color="primary" badgeContent='10 MP' >
-                            <Button variant='contained' color='default' onClick={onPlayerHealing} disabled={skillDisabled}>
+                            <Button
+                                variant='contained'
+                                color='default'
+                                onClick={onPlayerHealing}
+                                disabled={skillDisabled}
+                                data-testid='heal-btn'
+                            >
                                 <img src={heal} alt='heal' />
                             </Button>
                         </Badge>
                         <Badge color="primary" badgeContent='20 MP' >
-                            <Button variant='contained' color='default' onClick={onCriticalAttack} disabled={skillDisabled || critAttackDisable}>
-                                <img src={superAttack} alt='heal' />
+                            <Button
+                                variant='contained'
+                                color='default'
+                                onClick={onCriticalAttack}
+                                disabled={skillDisabled || critAttackDisable}
+                                data-testid='super attack-btn'
+                            >
+                                <img src={superAttack} alt='super attack' />
                             </Button>
                         </Badge>
                         <div className={style.loggerContainer}>
@@ -102,7 +120,7 @@ export const Battle: React.FC = () => {
                     </div>
                 </div>
 
-                <Card className={style.card}>
+                <Card className={style.card} data-testid='enemy card'>
                     <CardItem char={enemyData}/>
                 </Card>
             </Grid>
