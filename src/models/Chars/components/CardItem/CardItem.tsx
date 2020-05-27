@@ -54,7 +54,7 @@ const CardItemEl: React.FC<Props> = ({char}) => {
         <>
             <CardHeader
                 avatar={
-                    <Avatar src={char.sprites} variant='rounded' className={style.avatar}/>
+                    <Avatar src={char.sprites} variant='rounded' className={style.avatar} data-testid='img avatar'/>
                 }
                 title={char.name}
                 titleTypographyProps={{variant: 'h5'}}
@@ -69,8 +69,8 @@ const CardItemEl: React.FC<Props> = ({char}) => {
                                 key={stat.name + i}
                                 dense
                             >
-                                <ListItemText primary={stat.name}/>
-                                <ListItemText secondary={stat.base}/>
+                                <ListItemText primary={stat.name} data-testid='stat name'/>
+                                <ListItemText secondary={stat.base} data-testid='stat base'/>
                             </ListItem>
                         );
                     })}

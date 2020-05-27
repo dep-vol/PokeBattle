@@ -2,6 +2,7 @@
   <dictionary name="tecto">
     <words>
       <w>crit</w>
+      <w>testid</w>
     </words>
   </dictionary>
 </component>

@@ -41,7 +41,7 @@ export const api = {
         }));
     },
     getCount: async (): Promise<number> => {
-        const response = await Axios.get('https://pokeapi.co/api/v2/pokemon/pokemon');
+        const response = await Axios.get('https://pokeapi.co/api/v2/pokemon/');
         const { count } = response.data;
         return count;
     }
