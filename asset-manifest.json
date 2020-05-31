@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/PokeBattle/static/css/main.9b69bb5c.chunk.css",
+    "main.js": "/PokeBattle/static/js/main.e9ac0071.chunk.js",
+    "main.js.map": "/PokeBattle/static/js/main.e9ac0071.chunk.js.map",
+    "runtime-main.js": "/PokeBattle/static/js/runtime-main.12d48dc3.js",
+    "runtime-main.js.map": "/PokeBattle/static/js/runtime-main.12d48dc3.js.map",
+    "static/js/2.ce5f8db5.chunk.js": "/PokeBattle/static/js/2.ce5f8db5.chunk.js",
+    "static/js/2.ce5f8db5.chunk.js.map": "/PokeBattle/static/js/2.ce5f8db5.chunk.js.map",
+    "index.html": "/PokeBattle/index.html",
+    "precache-manifest.43c8e71de2b1decf497165a72d7f5a2a.js": "/PokeBattle/precache-manifest.43c8e71de2b1decf497165a72d7f5a2a.js",
+    "service-worker.js": "/PokeBattle/service-worker.js",
+    "static/css/main.9b69bb5c.chunk.css.map": "/PokeBattle/static/css/main.9b69bb5c.chunk.css.map",
+    "static/js/2.ce5f8db5.chunk.js.LICENSE.txt": "/PokeBattle/static/js/2.ce5f8db5.chunk.js.LICENSE.txt",
+    "static/media/pokemon_logo.png": "/PokeBattle/static/media/pokemon_logo.40fac573.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.12d48dc3.js",
+    "static/js/2.ce5f8db5.chunk.js",
+    "static/css/main.9b69bb5c.chunk.css",
+    "static/js/main.e9ac0071.chunk.js"
+  ]
+}
