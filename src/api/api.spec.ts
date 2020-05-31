@@ -130,7 +130,7 @@ describe('API getCount()', () => {
             count: 150
         };
 
-        mockedAxios.onGet('https://pokeapi.co/api/v2/pokemon/pokemon').reply(200, {count: 150});
+        mockedAxios.onGet('https://pokeapi.co/api/v2/pokemon/').reply(200, {count: 150});
 
         const fetchedCount = await api.getCount();
 
